@@ -1,0 +1,29 @@
+{
+  "name": "parmosense",
+  "version": "1.0.0",
+  "description": "ParmoSense by NAIST-UBI",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubi-naist/ParmoSense.git"
+  },
+  "author": "NAIST UBI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ubi-naist/ParmoSense/issues"
+  },
+  "homepage": "https://github.com/ubi-naist/ParmoSense#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-uglify": "^2.0.0"
+  }
+}
