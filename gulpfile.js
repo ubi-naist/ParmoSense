@@ -7,7 +7,7 @@ var plumber = require("gulp-plumber");
 gulp.task("server", function() {
     browser({
         server: {
-            baseDir: "./",
+            baseDir: "./docs",
             index  : "index.html"
         }
     });
@@ -17,7 +17,7 @@ gulp.task("sass", function() {
     gulp.src("./source/sass/**/*scss")
         .pipe(plumber())
         .pipe(sass())
-        .pipe(gulp.dest("./css"))
+        .pipe(gulp.dest("./docs/css"))
         .pipe(browser.reload({stream:true}));
 });
 
@@ -25,7 +25,7 @@ gulp.task("js", function() {
     gulp.src(["./source/js/**/*.js"])
         .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest("./js"))
+        .pipe(gulp.dest("./docs/js"))
         .pipe(browser.reload({stream:true}));
 });
 
