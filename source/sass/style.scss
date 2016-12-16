@@ -4,18 +4,38 @@
 }
 
 html {
+  height: 100%;
+  width: 100%;
   background: white;
 }
+
+a{text-decoration: none;}
 
 a:focus {outline: none}
 
 header.menubar div.action-wrap {
   width:100%;
   margin: 0 auto;
+  background: #0B5BA6;
+  opacity: 0.9;
+  float: left;
+  position: fixed;
+}
+
+header.menubar div.action-wrap div.left-space{
+  width: 10%;
+  height: 80px;
+  float: left;
+}
+
+
+header.menubar div.action-wrap h1 span{
+  display: none;
+  visibility: hidden;
 }
 
 header.menubar div.action-wrap nav ul li{
-  line-height: 100px;
+  line-height: 80px;
   padding: 0 50px;
   float: left;
   font-size: 20px;
@@ -25,13 +45,25 @@ header.menubar div.action-wrap nav ul li{
 
 
 header.menubar div.action-wrap nav ul li a:visited{
-  color: black;
-}
-
-
-header.menubar div.action-wrap nav ul:hover {
   color: white;
 }
+
+header.menubar div.action-wrap nav ul li a:hover {
+  color: #FD7609;
+}
+
+div.main{
+  height: 100%;
+  width: 100%;
+}
+
+div.main section.top-visual {
+  height: 100%;
+  width: 100%;
+  background: url("../img/logo_parmosense_fix2.png") center center no-repeat;
+  background-color: #0F7EE6
+}
+
 
 footer{
   width: 100%;
