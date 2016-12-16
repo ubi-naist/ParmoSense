@@ -4,3 +4,35 @@
 
 html {
   background: white; }
+
+a:focus {
+  outline: none; }
+
+header.menubar div.action-wrap {
+  width: 100%;
+  margin: 0 auto; }
+
+header.menubar div.action-wrap nav ul li {
+  line-height: 100px;
+  padding: 0 50px;
+  float: left;
+  font-size: 20px;
+  color: white;
+  background: #0B5BA6; }
+
+header.menubar div.action-wrap nav ul li a:visited {
+  color: black; }
+
+header.menubar div.action-wrap nav ul:hover {
+  color: white; }
+
+footer {
+  width: 100%;
+  height: 300px; }
+
+footer div {
+  color: gray;
+  background: #94CEF5; }
+
+footer div a {
+  color: gray; }
