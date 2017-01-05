@@ -28,11 +28,29 @@ a:focus {
   outline: none;
 }
 
+
+//-----------------//
+//    variables    //
+//-----------------//
+
+$brand-blue-normal: #0F7EE6;
+$brand-blue-dark: #0B5BA6;
+
+$brand-orange-normal: #ff8a00;
+
+$gray-light: #ccc;
+$gray-normal: #999;
+$gray-dark: #666;
+
+//------------------//
+//    custom css    //
+//------------------//
+
 header.menubar {
   display: block;
   width: 100%;
   height: 100px;
-  background: #0B5BA6;
+  background: $brand-blue-dark;
   opacity: 0.9;
   position: fixed;
   z-index: 1000;
@@ -53,8 +71,8 @@ header.menubar {
       margin: 0 0 0 10px;
       background: url("../img/logo_parmosense_icon.png") center center no-repeat;
       span {
-          display: none;
-          visibility: hidden;
+        display: none;
+        visibility: hidden;
       }
     }
     nav ul {
@@ -80,13 +98,13 @@ header.menubar {
 }
 
 div.main {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   section.top-visual {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: #0F7EE6;
+    background-color: $brand-blue-normal;
     div.visual-wrap {
       position: absolute;
       top: 50%;
@@ -95,19 +113,49 @@ div.main {
       z-index: 10;
     }
   }
+  div.top-contents {
+    padding: 40px 0 0;
+    section.top-content {
+      width: 100vw;
+      div.content-wrap {
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+        padding: 60px 40px;
+        margin: 0 auto;
+        h1 {
+          font-size: 1.6em;
+        }
+      }
+      &.download-link {
+        background: $gray-light;
+        div.content-wrap {
+          text-align: center;
+          padding: 80px 40px;
+        }
+      }
+    }
+  }
 }
 
 
-footer {
-  width: 100%;
-  height: 300px;
+footer.footer {
+  width: 100vw;
+  background: $brand-blue-dark;
+  div.footer-wrap {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    a {
+      color: white;
+    }
+    span.gmail-domain:before {
+      content: "@gmail.com";
+    }
+  }
 }
 
-footer div {
-  color: gray;
-  background: #94CEF5;
-}
-
-footer div a {
-  color: gray;
-}
