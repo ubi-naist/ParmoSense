@@ -1,16 +1,4 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -18,29 +6,8 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline; }
 
-/* HTML5 display-role reset for older browsers
-*/
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
 ol, ul {
   list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
 
 * {
   margin: 0;
@@ -57,71 +24,92 @@ a {
 a:focus {
   outline: none; }
 
-header.menubar div.action-wrap {
+header.menubar {
+  display: block;
   width: 100%;
-  margin: 0 auto;
-  background: #0B5BA6;
+  height: 100px;
+  background: #0071b5;
   opacity: 0.9;
-  float: left;
   position: fixed;
   z-index: 1000; }
-
-header.menubar div.action-wrap div.left-space {
-  width: 5%;
-  height: 80px;
-  float: left; }
-
-header.menubar div.action-wrap img {
-  height: 60px;
-  width: auto;
-  padding-top: 10px; }
-
-header.menubar div.action-wrap h1 span {
-  display: none;
-  visibility: hidden; }
-
-header.menubar div.action-wrap nav ul li {
-  height: 80px;
-  padding: 0 50px;
-  float: left;
-  font-size: 20px;
-  color: white;
-  background: #0B5BA6; }
-  header.menubar div.action-wrap nav ul li a {
+  header.menubar div.action-wrap {
     display: block;
-    height: 80px;
-    line-height: 80px; }
-
-header.menubar div.action-wrap nav ul li a:visited {
-  color: white; }
-
-header.menubar div.action-wrap nav ul li a:hover {
-  color: #FD7609; }
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto; }
+    header.menubar div.action-wrap img {
+      height: 60px;
+      width: auto;
+      padding-top: 10px; }
+    header.menubar div.action-wrap h1 {
+      float: left;
+      width: 100px;
+      height: 100px;
+      margin: 0 0 0 10px;
+      background: url("../img/logo_parmosense_icon.png") center center no-repeat; }
+      header.menubar div.action-wrap h1 span {
+        display: none;
+        visibility: hidden; }
+    header.menubar div.action-wrap nav ul {
+      float: right;
+      margin: 0 20px 0 0; }
+      header.menubar div.action-wrap nav ul li {
+        height: 100px;
+        float: left; }
+        header.menubar div.action-wrap nav ul li a {
+          display: block;
+          height: 100px;
+          line-height: 100px;
+          padding: 0 30px;
+          color: white;
+          font-size: 20px; }
+          header.menubar div.action-wrap nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.1); }
 
 div.main {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw; }
+  div.main section.top-visual {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #0093eb; }
+    div.main section.top-visual div.visual-wrap {
+      position: absolute;
+      top: 50%;
+      margin: -215px 0 0 -225px;
+      left: 50%;
+      z-index: 10; }
+  div.main div.top-contents {
+    padding: 40px 0 0; }
+    div.main div.top-contents section.top-content {
+      width: 100vw; }
+      div.main div.top-contents section.top-content div.content-wrap {
+        display: block;
+        width: 100%;
+        max-width: 1200px;
+        padding: 60px 40px;
+        margin: 0 auto; }
+        div.main div.top-contents section.top-content div.content-wrap h1 {
+          font-size: 1.6em; }
+      div.main div.top-contents section.top-content.download-link {
+        background: #ccc; }
+        div.main div.top-contents section.top-content.download-link div.content-wrap {
+          text-align: center;
+          padding: 80px 40px; }
 
-div.main section.top-visual {
-  position: relative;
-  height: 100vh;
+footer.footer {
   width: 100vw;
-  background-color: #0F7EE6; }
-
-div.main section.top-visual div.visual-wrap {
-  position: absolute;
-  top: 50%;
-  margin: -215px 0 0 -225px;
-  left: 50%;
-  z-index: 10; }
-
-footer {
-  width: 100%;
-  height: 300px; }
-
-footer div {
-  color: gray;
-  background: #94CEF5; }
-
-footer div a {
-  color: gray; }
+  background: #0071b5; }
+  footer.footer div.footer-wrap {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    margin: 0 auto;
+    color: white;
+    text-align: center; }
+    footer.footer div.footer-wrap a {
+      color: white; }
+    footer.footer div.footer-wrap span.gmail-domain:before {
+      content: "@gmail.com"; }
