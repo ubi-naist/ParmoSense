@@ -16,6 +16,7 @@ ol, ul {
 html {
   height: 100%;
   width: 100%;
+  font-size: 1.1em;
   background: white;
   font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif; }
 
@@ -82,24 +83,45 @@ div.main {
       padding: 40px 0 0; }
     div.main div.contents section.content {
       width: 100vw; }
+      div.main div.contents section.content h1 {
+        font-size: 2em;
+        line-height: 1.2em;
+        margin: 10px 0 25px;
+        font-weight: bold; }
+      div.main div.contents section.content h2 {
+        font-size: 1.5em;
+        line-height: 1.2em;
+        margin: 10px 0 15px; }
+      div.main div.contents section.content p {
+        line-height: 1.5em; }
+      div.main div.contents section.content ul {
+        list-style: disc;
+        padding: 10px 0; }
+        div.main div.contents section.content ul li {
+          margin: 0 0 0 25px; }
       div.main div.contents section.content div.content-wrap {
         display: block;
-        width: 100%;
+        width: auto;
         max-width: 1200px;
         padding: 60px 40px;
         margin: 0 auto; }
-        div.main div.contents section.content div.content-wrap h1 {
-          font-size: 2em;
-          line-height: 2.5em;
-          font-weight: bold;
-          font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif; }
-        div.main div.contents section.content div.content-wrap p {
-          line-height: 1.5em; }
+      div.main div.contents section.content.event-cards {
+        display: block;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto 60px; }
+        div.main div.contents section.content.event-cards div.content-wrap {
+          padding: 0 40px; }
+        div.main div.contents section.content.event-cards div.event-card {
+          margin: 20px 40px;
+          padding: 20px 30px;
+          box-shadow: 0 1px 3px 0 #ccc;
+          border-radius: 2px; }
       div.main div.contents section.content.download-link {
         background: #ccc; }
         div.main div.contents section.content.download-link div.content-wrap {
           text-align: center;
-          padding: 80px 40px; }
+          padding: 80px 0; }
 
 footer.footer {
   width: 100vw;
@@ -108,7 +130,7 @@ footer.footer {
     display: block;
     width: 100%;
     max-width: 1200px;
-    padding: 40px;
+    padding: 40px 0;
     margin: 0 auto;
     color: white;
     text-align: center; }
