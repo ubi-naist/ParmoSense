@@ -18,6 +18,7 @@ html {
   height: 100%;
   width: 100%;
   background: white;
+  font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif;
 }
 
 a {
@@ -88,6 +89,7 @@ header.menubar {
           padding: 0 30px;
           color: white;
           font-size: 20px;
+          letter-spacing: 2px;
           &:hover {
             background: rgba(255, 255, 255, 0.1);
           }
@@ -100,18 +102,11 @@ header.menubar {
 div.main {
   min-height: 100vh;
   width: 100vw;
-  section.top-visual {
+  div.top-visual {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: $brand-blue-normal;
-    div.visual-wrap {
-      position: absolute;
-      top: 50%;
-      margin: -215px 0 0 -225px;
-      left: 50%;
-      z-index: 10;
-    }
+    background: $brand-blue-normal url("../img/logo_parmosense_top.png") center center no-repeat;
   }
   div.top-contents {
     padding: 40px 0 0;
@@ -124,7 +119,13 @@ div.main {
         padding: 60px 40px;
         margin: 0 auto;
         h1 {
-          font-size: 1.6em;
+          font-size: 2em;
+          line-height: 2.5em;
+          font-weight: bold;
+          font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif;
+        }
+        p {
+          line-height: 1.5em;
         }
       }
       &.download-link {
