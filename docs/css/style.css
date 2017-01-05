@@ -76,26 +76,28 @@ div.main {
     height: 100vh;
     width: 100vw;
     background: #0093eb url("../img/logo_parmosense_top.png") center center no-repeat; }
-  div.main div.top-contents {
-    padding: 40px 0 0; }
-    div.main div.top-contents section.top-content {
+  div.main div.contents {
+    padding: 100px 0 0; }
+    div.main div.contents.top-page {
+      padding: 40px 0 0; }
+    div.main div.contents section.content {
       width: 100vw; }
-      div.main div.top-contents section.top-content div.content-wrap {
+      div.main div.contents section.content div.content-wrap {
         display: block;
         width: 100%;
         max-width: 1200px;
         padding: 60px 40px;
         margin: 0 auto; }
-        div.main div.top-contents section.top-content div.content-wrap h1 {
+        div.main div.contents section.content div.content-wrap h1 {
           font-size: 2em;
           line-height: 2.5em;
           font-weight: bold;
           font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif; }
-        div.main div.top-contents section.top-content div.content-wrap p {
+        div.main div.contents section.content div.content-wrap p {
           line-height: 1.5em; }
-      div.main div.top-contents section.top-content.download-link {
+      div.main div.contents section.content.download-link {
         background: #ccc; }
-        div.main div.top-contents section.top-content.download-link div.content-wrap {
+        div.main div.contents section.content.download-link div.content-wrap {
           text-align: center;
           padding: 80px 40px; }
 
