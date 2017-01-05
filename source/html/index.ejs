@@ -1,31 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>ParmoSense</title>
-  <meta name="description" content="ParmoSense is Participatory Mobile Sensing Platform. This platrform is provided by Ubiquitous Computing Systems Laboratory, NAIST.">
-  <meta name="keywords" content="Participatory Mobile Sensing Platform, NAIST, Ubiquitous Computing Systems"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no">
-  <link rel="stylesheet" href="/ParmoSense/css/style.css">
-  <script src="https://use.typekit.net/rcd2cdz.js"></script>
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-</head>
-
-<body>
-
-<header class="menubar">
-  <div class="action-wrap">
-    <a href="/ParmoSense/"><h1><span>ParmoSense</span></h1></a>
-    <nav>
-      <ul>
-        <li><a href="/ParmoSense/about/">About</a></li>
-        <li><a href="/ParmoSense/events/">Events</a></li>
-        <li><a href="/ParmoSense/support/">Support</a></li>
-        <li><a href="/ParmoSense/download/">Download</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+<%- include('./template/header') -%>
 
 <div class="main">
   <div class="top-visual">
@@ -85,12 +58,4 @@
   </div>
 </div>
 
-
-<footer class="footer">
-  <div class="footer-wrap">
-    <p>contact：<a href="mailto:parmosense.naist@gmail.com">parmosense.naist<span class="gmail-domain"></span></a></p>
-    <p><small>&copy; copyright 2016 ParmoSense</small></p>
-  </div>
-</footer>
-</body>
-</html>
+<%- include('./template/footer') -%>
