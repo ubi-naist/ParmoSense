@@ -26,6 +26,11 @@ a {
 a:focus {
   outline: none; }
 
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block; }
+
 header.menubar {
   display: block;
   width: 100%;
@@ -91,7 +96,15 @@ div.main {
       div.main div.contents section.content h2 {
         font-size: 1.5em;
         line-height: 1.2em;
-        margin: 10px 0 15px; }
+        margin: 30px 0 15px;
+        font-weight: bold; }
+      div.main div.contents section.content h3 {
+        font-size: 1.3em;
+        font-weight: bold; }
+      div.main div.contents section.content h1 span, div.main div.contents section.content h2 span, div.main div.contents section.content h3 span {
+        padding: 0 0 0 2ex;
+        font-size: 0.7em;
+        color: #666; }
       div.main div.contents section.content p {
         line-height: 1.5em; }
       div.main div.contents section.content ul {
@@ -99,6 +112,20 @@ div.main {
         padding: 10px 0; }
         div.main div.contents section.content ul li {
           margin: 0 0 0 25px; }
+        div.main div.contents section.content ul.member {
+          list-style: none; }
+          div.main div.contents section.content ul.member li {
+            margin: 0 0 30px;
+            width: auto;
+            min-height: 200px; }
+            div.main div.contents section.content ul.member li img {
+              float: left;
+              width: 200px;
+              border-radius: 4px;
+              margin: 0 30px 10px 0; }
+            div.main div.contents section.content ul.member li p.bio {
+              margin: 15px 0;
+              font-size: 0.8em; }
       div.main div.contents section.content div.content-wrap {
         display: block;
         width: auto;
