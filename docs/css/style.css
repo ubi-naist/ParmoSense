@@ -131,7 +131,10 @@ div.main {
       list-style: disc;
       padding: 10px 0; }
       div.main div.contents section.content ul li {
-        margin: 0 0 0 25px; }
+        margin: 2px 0 2px 25px; }
+        div.main div.contents section.content ul li ul {
+          list-style: circle;
+          padding: 8px 0; }
       div.main div.contents section.content ul.member {
         list-style: none; }
         div.main div.contents section.content ul.member li {
@@ -265,19 +268,24 @@ div.main {
         height: 200px;
         width: auto; }
   div.main div.contents.team section.content p.bio {
-    font-size: 0.9em !important;
-    line-height: 1.6em !important; }
+    font-size: 0.9em;
+    line-height: 1.6em; }
   div.main div.contents.team section.content ul.member {
     margin: 30px 0 0; }
   div.main div.contents.team section.content ul.work li {
-    min-height: auto !important;
+    min-height: auto;
     list-style: none;
     float: left;
     padding: 5px 10px;
-    margin: 0 10px 0 0 !important;
+    margin: 0 10px 0 0;
     color: #0093eb;
     border: 1px solid #0093eb;
     border-radius: 3px; }
+  div.main div.contents.download ul.requirement {
+    margin: 0 0 20px; }
+  div.main div.contents.download a.download-link {
+    display: block;
+    margin: 0 0 80px; }
 
 footer.footer {
   margin: 100px 0 0;
