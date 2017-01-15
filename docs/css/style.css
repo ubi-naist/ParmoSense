@@ -22,11 +22,11 @@ html {
 
 a {
   text-decoration: none;
-  color: #0093eb;
+  color: #ff8a00;
   font-weight: bold; }
 
 a:hover {
-  color: #0071b5; }
+  color: #cf7000; }
 
 a:focus {
   outline: none; }
@@ -120,7 +120,7 @@ div.main {
       div.main div.contents section.content p {
         line-height: 1.7em; }
         div.main div.contents section.content p.footnote {
-          margin: 20px 0 0;
+          margin: 20px 0;
           border: 1px solid #eee;
           border-width: 1px 0 0; }
       div.main div.contents section.content ul {
@@ -150,22 +150,22 @@ div.main {
         margin: 0 auto; }
     div.main div.contents.top-page a.page-link {
       float: right;
-      margin: 40px 15px;
+      margin: 20px 5px;
       padding: 5px 30px;
       position: relative; }
       div.main div.contents.top-page a.page-link:after {
         position: absolute;
         top: 50%;
-        margin: -7px 10px 0;
+        margin: -6px 10px 0;
         content: "";
         width: 0;
         height: 0;
         border-top: 7px solid transparent;
         border-right: 10px solid transparent;
         border-bottom: 7px solid transparent;
-        border-left: 10px solid #0093eb; }
+        border-left: 10px solid #ff8a00; }
       div.main div.contents.top-page a.page-link:hover:after {
-        border-left: 10px solid #0071b5; }
+        border-left: 10px solid #cf7000; }
     div.main div.contents.top-page div.top-about div.about-description {
       margin-right: 55%; }
     div.main div.contents.top-page div.top-about p {
@@ -181,6 +181,26 @@ div.main {
       div.main div.contents.top-page div.top-about div.app-ss img.iPhone-ss {
         width: 48%;
         float: right; }
+    div.main div.contents.top-page div.event-photos {
+      display: block;
+      height: 300px;
+      width: 100%;
+      margin: 10px 0;
+      overflow: hidden; }
+      div.main div.contents.top-page div.event-photos div {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch; }
+        div.main div.contents.top-page div.event-photos div ul {
+          display: inline-table;
+          max-width: 100%; }
+        div.main div.contents.top-page div.event-photos div li {
+          display: table-cell;
+          list-style: none;
+          padding: 0 10px 0 0; }
+        div.main div.contents.top-page div.event-photos div img {
+          height: 300px;
+          width: auto; }
     div.main div.contents.events section.event-cards {
       display: block;
       width: 100%;
