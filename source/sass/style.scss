@@ -179,7 +179,58 @@ div.main {
         max-width: 1200px;
         padding: 60px 40px;
         margin: 0 auto;
+        div.parmosense{
+          div {
+            margin: 0 0 30px;
+            width: auto;
+            min-height: 300px;
+            img.content-image {
+              float: right;
+              width: 350px;
+              border-radius: 4px;
+              margin: -50px 30px 0 100px;
+            }
+            div.appsdetail{
+              float: left;
+              ul.description{
+                list-style: circle;
+                margin: 0 30px 30px;
+                li{
+                  width: auto;
+                  min-height: 20px;
+                }
+              }
+            }
+            div.appsimage{
+              float: right;
+              width: 400px;
+              text-align: center;
+              img{
+                width: 180px;
+              }
+              div.android{
+                float: left;
+                text-align: center;
+              }
+              div.iphone{
+                float: right;
+                text-align: center;
+              }
+
+            }
+          }
+        }
       }
+
+      &.download{
+        div.content-wrap{
+          div.download-link{
+            display:block;
+            text-align: center;
+          }
+        }
+      }
+
       &.event-cards {
         display: block;
         width: 100%;
@@ -187,6 +238,7 @@ div.main {
         margin: 0 auto 60px;
         div.content-wrap {
           padding: 0 40px;
+
         }
         div.event-card {
           margin: 20px 40px;
