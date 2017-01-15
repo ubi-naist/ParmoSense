@@ -14,6 +14,27 @@ ol, ul {
   padding: 0;
 }
 
+
+//-----------------//
+//    variables    //
+//-----------------//
+
+$brand-blue-normal: #0093eb;
+$brand-blue-dark: #0071b5;
+
+$brand-orange-normal: #ff8a00;
+$brand-orange-dark: #cf7000;
+
+$gray-light: #ccc;
+$gray-normal: #999;
+$gray-dark: #666;
+
+
+//-------------------//
+//    basic style    //
+//-------------------//
+
+
 html {
   height: 100%;
   width: 100%;
@@ -24,6 +45,11 @@ html {
 
 a {
   text-decoration: none;
+  color: $brand-orange-normal;
+  font-weight: bold;
+}
+a:hover {
+  color: $brand-orange-dark;
 }
 
 a:focus {
@@ -36,19 +62,18 @@ a:focus {
   display: block;
 }
 
+sup {
+  font-size: 0.75em;
+  vertical-align: top;
+  position: relative;
+  top: -0.2em;
+  margin: 0 0.2em;
+}
 
-//-----------------//
-//    variables    //
-//-----------------//
+.bg-gray {
+  background: #f2f2f2;
+}
 
-$brand-blue-normal: #0093eb;
-$brand-blue-dark: #0071b5;
-
-$brand-orange-normal: #ff8a00;
-
-$gray-light: #ccc;
-$gray-normal: #999;
-$gray-dark: #666;
 
 //------------------//
 //    custom css    //
@@ -109,17 +134,7 @@ header.menubar {
 div.main {
   min-height: 100vh;
   width: 100vw;
-  div.top-visual {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background: $brand-blue-normal url("../img/logo_parmosense_top.png") center center no-repeat;
-  }
   div.contents {
-    padding: 100px 0 0;
-    &.top-page {
-      padding: 40px 0 0;
-    }
     section.content {
       width: 100vw;
       h1 {
@@ -146,7 +161,12 @@ div.main {
         }
       }
       p {
-        line-height: 1.5em;
+        line-height: 1.7em;
+        &.footnote {
+          margin: 20px 0;
+          border: 1px solid #eee;
+          border-width: 1px 0 0;
+        }
       }
       ul {
         list-style: disc;
@@ -179,79 +199,152 @@ div.main {
         max-width: 1200px;
         padding: 60px 40px;
         margin: 0 auto;
-        div.parmosense{
-          div {
-            margin: 0 0 30px;
+      }
+      &.top-visual {
+        height: 100vh;
+        margin: 0 0 30px;
+        background: $brand-blue-normal url("../img/logo_parmosense_top.png") center center no-repeat;
+      }
+      &.sub-page-top-visual {
+        margin: 0 0 60px;
+        padding: 100px 0 0;
+        background: #0093eb;
+        color: white;
+        h1 span {
+          color: #a8d8f4; 
+        }
+      }
+    }
+    &.top-page {
+      a.page-link {
+        float: right;
+        margin: 20px 5px;
+        padding: 5px 30px;
+        position: relative;
+        &:after {
+          position: absolute;
+          top: 50%;
+          margin: -6px 10px 0;
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 7px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 7px solid transparent;
+          border-left: 10px solid $brand-orange-normal;
+        }
+        &:hover:after {
+          border-left: 10px solid $brand-orange-dark;
+        }
+      }
+
+      div.left-description {
+        margin-right: 55%;
+        p {
+          padding: 15px 0 0;
+        }
+      }
+      div.app-ss {
+        float: right;
+        width: 50%;
+        margin: 0 0 20px 5%;
+        text-align: center;
+        img.android-ss {
+          width: 48%;
+          float: left;
+        }
+        img.iPhone-ss {
+          width: 48%;
+          float: right;
+        }
+      }
+      div.event-photos {
+        display: block;
+        height: 300px;
+        width: 100%;
+        margin: -30px 0 -40px;
+        overflow: hidden;
+        div {
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+          ul {
+            display: inline-table;
+            max-width: 100%;
+          }
+          li {
+            display: table-cell;
+            list-style: none;
+            padding: 0 10px 0 0;
+          }
+          img {
+            height: 300px;
             width: auto;
-            min-height: 300px;
-            img.content-image {
-              float: right;
-              width: 350px;
-              border-radius: 4px;
-              margin: -50px 30px 0 100px;
-            }
-            div.appsdetail{
-              float: left;
-              ul.description{
-                list-style: circle;
-                margin: 0 30px 30px;
-                li{
-                  width: auto;
-                  min-height: 20px;
-                }
-              }
-            }
-            div.appsimage{
-              float: right;
-              width: 400px;
-              text-align: center;
-              img{
-                width: 180px;
-              }
-              div.android{
-                float: left;
-                text-align: center;
-              }
-              div.iphone{
-                float: right;
-                text-align: center;
-              }
-
-            }
           }
         }
       }
-
-      &.download{
-        div.content-wrap{
-          div.download-link{
-            display:block;
-            text-align: center;
-          }
-        }
+      div.download-link {
+        width: 50%;
+        margin: 20px 0;
+        float: right;
       }
-
-      &.event-cards {
+    }
+    &.events {
+      section.event-cards {
         display: block;
         width: 100%;
         max-width: 1280px;
-        margin: 0 auto 60px;
-        div.content-wrap {
-          padding: 0 40px;
-
-        }
+        margin: 0 auto;
         div.event-card {
-          margin: 20px 40px;
+          margin: 20px 0;
           padding: 20px 30px;
           box-shadow: 0 1px 3px 0 #ccc;
           border-radius: 2px;
+          p.event-reference {
+            margin: 15px 0 0;
+          }
+        }
+        div.event-photo {
+          height: 200px;
+          width: 100%;
+          margin: 10px 0;
+          overflow: hidden;
+          & > div {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+          }
+          ul {
+            display: inline-table;
+            max-width: 100%;
+          }
+          li {
+            display: table-cell;
+            list-style: none;
+            padding: 0 10px 0 0!important;
+          }
+          img {
+            height: 200px;
+            width: auto;
+          }
         }
       }
-      &.download-link {
-        background: $gray-light;
-        div.content-wrap {
-          text-align: center;
-          padding: 80px 0;
+    }
+    &.team {
+      section.content {
+        p.bio {
+          font-size: 0.9em!important;  
+          line-height: 1.6em!important;
+        }
+        ul.work li {
+          min-height: auto!important;
+          list-style: none;
+          float: left;
+          padding: 5px 10px;
+          margin: 0 10px 0 0!important;
+          color: #0093eb;
+          border: 1px solid #0093eb;
+          border-radius: 3px;
         }
       }
     }

@@ -1,118 +1,102 @@
 <%- include('./template/header') -%>
 
 <div class="main">
-  <div class="top-visual">
-  </div>
-
   <div class="contents top-page">
-    <section class="content brief-intro">
+    <section class="content top-visual">
+    </section>
+    <section class="content">
       <div class="content-wrap clearfix">
-        <h1>ParmoSense <span>Platform for participatory mobile urban sensing</span></h1>
-        <div class="parmosense">
-          <h2>About</h2>
-          <div>
-            <img class="content-image" src="img/parmo.png">
+        <h1>ParmoSense<span>Platform for participatory mobile urban sensing</span></h1>
+        <div class="top-about">
+          <div class="app-ss">
+            <img class="android-ss" src="img/ss/android_1.png">
+            <img class="iPhone-ss" src="img/ss/iPhone_1.png">
+          </div>
+          <div class="left-description">
             <p>
-              ParmoSenseは，ユーザ参加型モバイルセンシングアプリケーションです．</br>
-              位置情報と紐付いた様々な「情報」を他のユーザと共有することが可能です．</br>
-              また，収集したデータは専用Webページからcsvやkmlファイルとしてダウンロードでき，オープンデータとして利用可能となっています．</br>
+              ParmoSenseは、街歩き・観光・地域イベントなどの参加者が、互いに「位置情報」に紐づく「情報」をリアルタイムに共有するためのプラットフォームです。
             </p>
-          </div>
-          <h2>Mobile Apps</h2>
-          <div>
-            <div class= "appsdetail">
-              <ul class= "description">
-                <li></li>
-                <li></li>
-              </ul>
-            </div>
-            <div class="appsimage">
-              <div class="android">
-                <img class="androidimage" src="img/ss/android1.png">
-                <p>Android</p>
-              </div>
-              <div class="iphone">
-                <img class="iphoneimage" src="img/ss/iPhone1.png">
-                <p>iPhone</p>
-              </div>
-            </div>
+            <p>
+              また、リアルタイムな情報共有にとどまらず、共有されたデータの整理・解析により、都市環境情報を整備するためのアプリ<sup>＊1</sup>としても利用することができます。
+            </p>
+            <p>
+              収集したデータは、Web API 経由で、XMLやJSON、KMLなど、オープンデータとして利用可能な形式として出力可能です。マッピングパーティやFix My Streetといった地域活動を支援することができます。
+            </p>
+            <p class="footnote">
+              <sup>＊1</sup> ユーザ参加型モバイルセンシング
+            </p>
+            <a href="about/" class="page-link">ParmoSense をもっと知る</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="content events">
-        <div class="content-wrap">
-          <h1>Events</h1>
-          <p>これまでに，オープンキャンパスや自転車スタンプラリーイベント，街歩きイベントなどで様々なイベントで活用されてきました。</p>
+    <section class="content bg-gray">
+      <div class="content-wrap clearfix">
+        <h1>Events<span>イベント</span></h1>
+        <p>
+          ParmoSenseは、学術研究や地域活動をはじめ、さまざまな用途に活用できます。<br>
+          学術研究の実証実験や、地域のスタンプラリー・街歩きイベントなどですでに実稼働しています。
+        </p>
+      </div>
+      <div class="event-photos">
+        <div>
+          <ul>
+            <li><img src="img/events/naist_opencampus_1.jpg"></li>
+            <li><img src="img/events/naist_opencampus_2.jpg"></li>
+            <li><img src="img/events/naist_opencampus_3.jpg"></li>
+            <li><img src="img/events/ubiquitous_3.jpg"></li>
+            <li><img src="img/events/ubiquitous_2.jpg"></li>
+            <li><img src="img/events/ubiquitous_4.jpg"></li>
+            <li><img src="img/events/ikoma_1.jpg"></li>
+            <li><img src="img/events/ikoma_2.jpg"></li>
+            <li><img src="img/events/ikoma_3.jpg"></li>
+            <li><img src="img/events/ayase_1.jpg"></li>
+            <li><img src="img/events/ayase_2.jpg"></li>
+            <li><img src="img/events/kyoto_1.jpg"></li>
+            <li><img src="img/events/kyoto_2.jpg"></li>
+          </ul>
         </div>
-      </section>
+      </div>
+      <div class="content-wrap clearfix">
+        <a href="events/" class="page-link">ParmoSense の活用例</a>
+      </div>
+    </section>
 
-      <section class="content team">
-        <div class="content-wrap">
-          <h1>Team</h1>
-          <p>ParmoSenseは，奈良先端科学技術大学院大学ユビキタスコンピューティングシステム研究室スマートシティ研究グループが開発しています。</br>
-            詳しくは<a href="/team/">こちら</a>
-          </p>
-        </div>
-      </section>
+    <section class="content">
+      <div class="content-wrap clearfix">
+        <h1>Development Team<span>開発チーム</span></h1>
+        <p>
+          ParmoSenseは、奈良先端科学技術大学院大学 情報科学研究科 ユビキタスコンピューティングシステム研究室 スマートシティ研究グループが開発しています。
+        </p>
+        <a href="team/" class="page-link">開発チームメンバーについて</a>
+      </div>
+    </section>
 
-      <section class="content download">
-        <div class="content-wrap">
-          <h1>Download</h1>
-          <p>ParmoSenseは以下のリンクからダウンロード可能です。仕様およびスペックは<a href="/download/">ダウンロードページ</a>からご確認いただけます。
-          </p>
-          <div class="download-link">
-            <a href="https://play.google.com/store/apps/details?id=jp.naist.ubi_lab.parmo_sense"> <img src="img/badge_googleplay.png" alt="ParmoSense Android"></a>
-            <a href="https://itunes.apple.com/jp/app/parmosense/id1184713498"><img src="img/badge_appstore.png" alt="ParmoSense iOS"></a>
-          </div>
-          </div>
-      </section>
-
-      <!--
-      <section class="content andorid-detail">
-        <div class="content-wrap">
-          <h1>ParmoSense for Android</h1>
-          <div class="android-content">
-            <div class="android-img">Android-img</div>
-            <div class="android-spec">
-              <dl>
-                <dt>対応OS</dt> <dd> Android5.0 以上</dd>
-                <dt>a</dt> <dd>aa</dd>
-                <dt>b</dt> <dd>bb</dd>
-                <dt>c</dt> <dd>cc</dd>
-              </dl>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="content ios-detail">
-        <div class="content-wrap">
-          <h1>ParmoSense for iOS</h1>
-          <div class="ios-content">
-            <div class="ios-spec">
-              <dl>
-                <dt>対応OS</dt> <dd> iOS10.0 以上 </dd>
-                <dt>a</dt> <dd>aa</dd>
-                <dt>b</dt> <dd>bb</dd>
-                <dt>c</dt> <dd>cc</dd>
-              </dl>
-            </div>
-            <div class="ios-img">iOS-img</div>
-          </div>
-        </div>
-      </section>
-
-    -->
-
-      <section class="content download-link">
-        <div class="content-wrap">
+    <section class="content bg-gray">
+      <div class="content-wrap clearfix">
+        <h1>Download<span>ダウンロード</span></h1>
+        <div class="download-link">
           <a href="https://play.google.com/store/apps/details?id=jp.naist.ubi_lab.parmo_sense"> <img src="img/badge_googleplay.png" alt="ParmoSense Android"></a>
           <a href="https://itunes.apple.com/jp/app/parmosense/id1184713498"><img src="img/badge_appstore.png" alt="ParmoSense iOS"></a>
-
         </div>
-      </section>
-    </div>
+        <div class="left-description">
+          <p>
+            ParmoSenseは以下のリンクからダウンロード可能です。<br>
+            端末のスペック要件については<a href="/download/">こちら</a>をご確認ください。
+          </p>
+          <a href="team/" class="page-link">端末スペック要件を確認する</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="content download-link">
+      <div class="content-wrap">
+        <a href="https://play.google.com/store/apps/details?id=jp.naist.ubi_lab.parmo_sense"> <img src="img/badge_googleplay.png" alt="ParmoSense Android"></a>
+        <a href="https://itunes.apple.com/jp/app/parmosense/id1184713498"><img src="img/badge_appstore.png" alt="ParmoSense iOS"></a>
+
+      </div>
+    </section>
   </div>
 
   <%- include('./template/footer') -%>
