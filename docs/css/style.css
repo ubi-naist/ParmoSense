@@ -290,3 +290,37 @@ footer.footer {
           margin: 10px; }
       footer.footer div.footer-wrap span.gmail-domain:before {
         content: "@gmail.com"; }
+
+a.for-lod-challenge {
+  position: fixed;
+  right: 40px;
+  bottom: 40px;
+  width: 240px;
+  height: 120px;
+  background: #f4002a url("../img/lodc/lodc.png") center center no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 black; }
+  a.for-lod-challenge:hover {
+    bottom: 39px;
+    box-shadow: 0 0 2px 0 black; }
+
+div.for-lod-challenge div.lodc-step {
+  padding: 40px 0; }
+  div.for-lod-challenge div.lodc-step h2 {
+    margin: 10px 0 !important; }
+  div.for-lod-challenge div.lodc-step + h1 {
+    padding: 80px 0 0; }
+  div.for-lod-challenge div.lodc-step ul {
+    padding: 0 0 20px; }
+
+div.for-lod-challenge p {
+  padding: 10px 0; }
+
+div.for-lod-challenge div.download-link {
+  padding: 20px 0; }
+
+div.for-lod-challenge img.right-img {
+  float: right;
+  width: 45%;
+  margin: 0 0 0 5%;
+  height: auto; }
