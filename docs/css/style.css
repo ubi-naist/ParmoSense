@@ -183,17 +183,35 @@ div.main {
           padding: 80px 0; }
 
 footer.footer {
-  width: 100vw;
-  background: #0071b5; }
-  footer.footer div.footer-wrap {
+  width: 100vw; }
+  footer.footer div {
     display: block;
-    width: 100%;
-    max-width: 1200px;
-    padding: 40px 0;
-    margin: 0 auto;
-    color: white;
-    text-align: center; }
-    footer.footer div.footer-wrap a {
-      color: white; }
-    footer.footer div.footer-wrap span.gmail-domain:before {
-      content: "@gmail.com"; }
+    width: 100%; }
+    footer.footer div.footer-image {
+      padding: 90px 0 0;
+      background-color: white;
+      background-image: url(/img/footer_image.png);
+      background-position: top center;
+      background-repeat: no-repeat; }
+    footer.footer div.footer-wrap {
+      background: #0071b5;
+      padding: 40px 0 20px 0;
+      margin: 0 auto;
+      color: white;
+      text-align: center; }
+      footer.footer div.footer-wrap a {
+        color: white; }
+      footer.footer div.footer-wrap ul.site-link {
+        list-style-type: none; }
+        footer.footer div.footer-wrap ul.site-link li {
+          display: inline-block;
+          padding: 5px;
+          margin: 10px; }
+      footer.footer div.footer-wrap ul.ex-link {
+        list-style-type: none; }
+        footer.footer div.footer-wrap ul.ex-link li {
+          display: inline-block;
+          padding: 5px 0 0 0;
+          margin: 10px; }
+      footer.footer div.footer-wrap span.gmail-domain:before {
+        content: "@gmail.com"; }
