@@ -134,17 +134,7 @@ header.menubar {
 div.main {
   min-height: 100vh;
   width: 100vw;
-  div.top-visual {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background: $brand-blue-normal url("../img/logo_parmosense_top.png") center center no-repeat;
-  }
   div.contents {
-    padding: 100px 0 0;
-    &.top-page {
-      padding: 40px 0 0;
-    }
     section.content {
       width: 100vw;
       h1 {
@@ -210,6 +200,20 @@ div.main {
         padding: 60px 40px;
         margin: 0 auto;
       }
+      &.top-visual {
+        height: 100vh;
+        margin: 0 0 30px;
+        background: $brand-blue-normal url("../img/logo_parmosense_top.png") center center no-repeat;
+      }
+      &.sub-page-top-visual {
+        margin: 0 0 60px;
+        padding: 100px 0 0;
+        background: #0093eb;
+        color: white;
+        h1 span {
+          color: #a8d8f4; 
+        }
+      }
     }
     &.top-page {
       a.page-link {
@@ -233,7 +237,7 @@ div.main {
           border-left: 10px solid $brand-orange-dark;
         }
       }
-      
+
       div.left-description {
         margin-right: 55%;
         p {
@@ -290,16 +294,57 @@ div.main {
         display: block;
         width: 100%;
         max-width: 1280px;
-        margin: 0 auto 60px;
-        div.content-wrap {
-          padding: 0 40px;
-
-        }
+        margin: 0 auto;
         div.event-card {
-          margin: 20px 40px;
+          margin: 20px 0;
           padding: 20px 30px;
           box-shadow: 0 1px 3px 0 #ccc;
           border-radius: 2px;
+          p.event-reference {
+            margin: 15px 0 0;
+          }
+        }
+        div.event-photo {
+          height: 200px;
+          width: 100%;
+          margin: 10px 0;
+          overflow: hidden;
+          & > div {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+          }
+          ul {
+            display: inline-table;
+            max-width: 100%;
+          }
+          li {
+            display: table-cell;
+            list-style: none;
+            padding: 0 10px 0 0!important;
+          }
+          img {
+            height: 200px;
+            width: auto;
+          }
+        }
+      }
+    }
+    &.team {
+      section.content {
+        p.bio {
+          font-size: 0.9em!important;  
+          line-height: 1.6em!important;
+        }
+        ul.work li {
+          min-height: auto!important;
+          list-style: none;
+          float: left;
+          padding: 5px 10px;
+          margin: 0 10px 0 0!important;
+          color: #0093eb;
+          border: 1px solid #0093eb;
+          border-radius: 3px;
         }
       }
     }

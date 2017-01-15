@@ -92,134 +92,167 @@ header.menubar {
 div.main {
   min-height: 100vh;
   width: 100vw; }
-  div.main div.top-visual {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    background: #0093eb url("../img/logo_parmosense_top.png") center center no-repeat; }
-  div.main div.contents {
-    padding: 100px 0 0; }
-    div.main div.contents.top-page {
-      padding: 40px 0 0; }
-    div.main div.contents section.content {
-      width: 100vw; }
-      div.main div.contents section.content h1 {
-        font-size: 2em;
-        line-height: 1.2em;
-        margin: 10px 0 25px;
-        font-weight: bold; }
-      div.main div.contents section.content h2 {
-        font-size: 1.5em;
-        line-height: 1.2em;
-        margin: 30px 0 15px;
-        font-weight: bold; }
-      div.main div.contents section.content h3 {
-        font-size: 1.3em;
-        font-weight: bold; }
-      div.main div.contents section.content h1 span, div.main div.contents section.content h2 span, div.main div.contents section.content h3 span {
-        padding: 0 0 0 2ex;
-        font-size: 0.7em;
-        color: #666; }
-      div.main div.contents section.content p {
-        line-height: 1.7em; }
-        div.main div.contents section.content p.footnote {
-          margin: 20px 0;
-          border: 1px solid #eee;
-          border-width: 1px 0 0; }
-      div.main div.contents section.content ul {
-        list-style: disc;
-        padding: 10px 0; }
-        div.main div.contents section.content ul li {
-          margin: 0 0 0 25px; }
-        div.main div.contents section.content ul.member {
-          list-style: none; }
-          div.main div.contents section.content ul.member li {
-            margin: 0 0 30px;
-            width: auto;
-            min-height: 200px; }
-            div.main div.contents section.content ul.member li img {
-              float: left;
-              width: 200px;
-              border-radius: 4px;
-              margin: 0 30px 10px 0; }
-            div.main div.contents section.content ul.member li p.bio {
-              margin: 15px 0;
-              font-size: 0.8em; }
-      div.main div.contents section.content div.content-wrap {
-        display: block;
-        width: auto;
-        max-width: 1200px;
-        padding: 60px 40px;
-        margin: 0 auto; }
-    div.main div.contents.top-page a.page-link {
-      float: right;
-      margin: 20px 5px;
-      padding: 5px 30px;
-      position: relative; }
-      div.main div.contents.top-page a.page-link:after {
-        position: absolute;
-        top: 50%;
-        margin: -6px 10px 0;
-        content: "";
-        width: 0;
-        height: 0;
-        border-top: 7px solid transparent;
-        border-right: 10px solid transparent;
-        border-bottom: 7px solid transparent;
-        border-left: 10px solid #ff8a00; }
-      div.main div.contents.top-page a.page-link:hover:after {
-        border-left: 10px solid #cf7000; }
-    div.main div.contents.top-page div.left-description {
-      margin-right: 55%; }
-      div.main div.contents.top-page div.left-description p {
-        padding: 15px 0 0; }
-    div.main div.contents.top-page div.app-ss {
-      float: right;
-      width: 50%;
-      margin: 0 0 20px 5%;
-      text-align: center; }
-      div.main div.contents.top-page div.app-ss img.android-ss {
-        width: 48%;
-        float: left; }
-      div.main div.contents.top-page div.app-ss img.iPhone-ss {
-        width: 48%;
-        float: right; }
-    div.main div.contents.top-page div.event-photos {
+  div.main div.contents section.content {
+    width: 100vw; }
+    div.main div.contents section.content h1 {
+      font-size: 2em;
+      line-height: 1.2em;
+      margin: 10px 0 25px;
+      font-weight: bold; }
+    div.main div.contents section.content h2 {
+      font-size: 1.5em;
+      line-height: 1.2em;
+      margin: 30px 0 15px;
+      font-weight: bold; }
+    div.main div.contents section.content h3 {
+      font-size: 1.3em;
+      font-weight: bold; }
+    div.main div.contents section.content h1 span, div.main div.contents section.content h2 span, div.main div.contents section.content h3 span {
+      padding: 0 0 0 2ex;
+      font-size: 0.7em;
+      color: #666; }
+    div.main div.contents section.content p {
+      line-height: 1.7em; }
+      div.main div.contents section.content p.footnote {
+        margin: 20px 0;
+        border: 1px solid #eee;
+        border-width: 1px 0 0; }
+    div.main div.contents section.content ul {
+      list-style: disc;
+      padding: 10px 0; }
+      div.main div.contents section.content ul li {
+        margin: 0 0 0 25px; }
+      div.main div.contents section.content ul.member {
+        list-style: none; }
+        div.main div.contents section.content ul.member li {
+          margin: 0 0 30px;
+          width: auto;
+          min-height: 200px; }
+          div.main div.contents section.content ul.member li img {
+            float: left;
+            width: 200px;
+            border-radius: 4px;
+            margin: 0 30px 10px 0; }
+          div.main div.contents section.content ul.member li p.bio {
+            margin: 15px 0;
+            font-size: 0.8em; }
+    div.main div.contents section.content div.content-wrap {
       display: block;
-      height: 300px;
+      width: auto;
+      max-width: 1200px;
+      padding: 60px 40px;
+      margin: 0 auto; }
+    div.main div.contents section.content.top-visual {
+      height: 100vh;
+      margin: 0 0 30px;
+      background: #0093eb url("../img/logo_parmosense_top.png") center center no-repeat; }
+    div.main div.contents section.content.sub-page-top-visual {
+      margin: 0 0 60px;
+      padding: 100px 0 0;
+      background: #0093eb;
+      color: white; }
+      div.main div.contents section.content.sub-page-top-visual h1 span {
+        color: #a8d8f4; }
+  div.main div.contents.top-page a.page-link {
+    float: right;
+    margin: 20px 5px;
+    padding: 5px 30px;
+    position: relative; }
+    div.main div.contents.top-page a.page-link:after {
+      position: absolute;
+      top: 50%;
+      margin: -6px 10px 0;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 10px solid #ff8a00; }
+    div.main div.contents.top-page a.page-link:hover:after {
+      border-left: 10px solid #cf7000; }
+  div.main div.contents.top-page div.left-description {
+    margin-right: 55%; }
+    div.main div.contents.top-page div.left-description p {
+      padding: 15px 0 0; }
+  div.main div.contents.top-page div.app-ss {
+    float: right;
+    width: 50%;
+    margin: 0 0 20px 5%;
+    text-align: center; }
+    div.main div.contents.top-page div.app-ss img.android-ss {
+      width: 48%;
+      float: left; }
+    div.main div.contents.top-page div.app-ss img.iPhone-ss {
+      width: 48%;
+      float: right; }
+  div.main div.contents.top-page div.event-photos {
+    display: block;
+    height: 300px;
+    width: 100%;
+    margin: -30px 0 -40px;
+    overflow: hidden; }
+    div.main div.contents.top-page div.event-photos div {
       width: 100%;
-      margin: -30px 0 -40px;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; }
+      div.main div.contents.top-page div.event-photos div ul {
+        display: inline-table;
+        max-width: 100%; }
+      div.main div.contents.top-page div.event-photos div li {
+        display: table-cell;
+        list-style: none;
+        padding: 0 10px 0 0; }
+      div.main div.contents.top-page div.event-photos div img {
+        height: 300px;
+        width: auto; }
+  div.main div.contents.top-page div.download-link {
+    width: 50%;
+    margin: 20px 0;
+    float: right; }
+  div.main div.contents.events section.event-cards {
+    display: block;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto; }
+    div.main div.contents.events section.event-cards div.event-card {
+      margin: 20px 0;
+      padding: 20px 30px;
+      box-shadow: 0 1px 3px 0 #ccc;
+      border-radius: 2px; }
+      div.main div.contents.events section.event-cards div.event-card p.event-reference {
+        margin: 15px 0 0; }
+    div.main div.contents.events section.event-cards div.event-photo {
+      height: 200px;
+      width: 100%;
+      margin: 10px 0;
       overflow: hidden; }
-      div.main div.contents.top-page div.event-photos div {
+      div.main div.contents.events section.event-cards div.event-photo > div {
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch; }
-        div.main div.contents.top-page div.event-photos div ul {
-          display: inline-table;
-          max-width: 100%; }
-        div.main div.contents.top-page div.event-photos div li {
-          display: table-cell;
-          list-style: none;
-          padding: 0 10px 0 0; }
-        div.main div.contents.top-page div.event-photos div img {
-          height: 300px;
-          width: auto; }
-    div.main div.contents.top-page div.download-link {
-      width: 50%;
-      margin: 20px 0;
-      float: right; }
-    div.main div.contents.events section.event-cards {
-      display: block;
-      width: 100%;
-      max-width: 1280px;
-      margin: 0 auto 60px; }
-      div.main div.contents.events section.event-cards div.content-wrap {
-        padding: 0 40px; }
-      div.main div.contents.events section.event-cards div.event-card {
-        margin: 20px 40px;
-        padding: 20px 30px;
-        box-shadow: 0 1px 3px 0 #ccc;
-        border-radius: 2px; }
+      div.main div.contents.events section.event-cards div.event-photo ul {
+        display: inline-table;
+        max-width: 100%; }
+      div.main div.contents.events section.event-cards div.event-photo li {
+        display: table-cell;
+        list-style: none;
+        padding: 0 10px 0 0 !important; }
+      div.main div.contents.events section.event-cards div.event-photo img {
+        height: 200px;
+        width: auto; }
+  div.main div.contents.team section.content p.bio {
+    font-size: 0.9em !important;
+    line-height: 1.6em !important; }
+  div.main div.contents.team section.content ul.work li {
+    min-height: auto !important;
+    list-style: none;
+    float: left;
+    padding: 5px 10px;
+    margin: 0 10px 0 0 !important;
+    color: #0093eb;
+    border: 1px solid #0093eb;
+    border-radius: 3px; }
 
 footer.footer {
   width: 100vw;
