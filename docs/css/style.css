@@ -21,7 +21,12 @@ html {
   font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #0093eb;
+  font-weight: bold; }
+
+a:hover {
+  color: #0071b5; }
 
 a:focus {
   outline: none; }
@@ -30,6 +35,13 @@ a:focus {
   content: "";
   clear: both;
   display: block; }
+
+sup {
+  font-size: 0.75em;
+  vertical-align: top;
+  position: relative;
+  top: -0.2em;
+  margin: 0 0.2em; }
 
 header.menubar {
   display: block;
@@ -106,7 +118,11 @@ div.main {
         font-size: 0.7em;
         color: #666; }
       div.main div.contents section.content p {
-        line-height: 1.5em; }
+        line-height: 1.7em; }
+        div.main div.contents section.content p.footnote {
+          margin: 20px 0 0;
+          border: 1px solid #eee;
+          border-width: 1px 0 0; }
       div.main div.contents section.content ul {
         list-style: disc;
         padding: 10px 0; }
@@ -132,55 +148,51 @@ div.main {
         max-width: 1200px;
         padding: 60px 40px;
         margin: 0 auto; }
-        div.main div.contents section.content div.content-wrap div.parmosense div {
-          margin: 0 0 30px;
-          width: auto;
-          min-height: 300px; }
-          div.main div.contents section.content div.content-wrap div.parmosense div img.content-image {
-            float: right;
-            width: 350px;
-            border-radius: 4px;
-            margin: -50px 30px 0 100px; }
-          div.main div.contents section.content div.content-wrap div.parmosense div div.appsdetail {
-            float: left; }
-            div.main div.contents section.content div.content-wrap div.parmosense div div.appsdetail ul.description {
-              list-style: circle;
-              margin: 0 30px 30px; }
-              div.main div.contents section.content div.content-wrap div.parmosense div div.appsdetail ul.description li {
-                width: auto;
-                min-height: 20px; }
-          div.main div.contents section.content div.content-wrap div.parmosense div div.appsimage {
-            float: right;
-            width: 400px;
-            text-align: center; }
-            div.main div.contents section.content div.content-wrap div.parmosense div div.appsimage img {
-              width: 180px; }
-            div.main div.contents section.content div.content-wrap div.parmosense div div.appsimage div.android {
-              float: left;
-              text-align: center; }
-            div.main div.contents section.content div.content-wrap div.parmosense div div.appsimage div.iphone {
-              float: right;
-              text-align: center; }
-      div.main div.contents section.content.download div.content-wrap div.download-link {
-        display: block;
-        text-align: center; }
-      div.main div.contents section.content.event-cards {
-        display: block;
-        width: 100%;
-        max-width: 1280px;
-        margin: 0 auto 60px; }
-        div.main div.contents section.content.event-cards div.content-wrap {
-          padding: 0 40px; }
-        div.main div.contents section.content.event-cards div.event-card {
-          margin: 20px 40px;
-          padding: 20px 30px;
-          box-shadow: 0 1px 3px 0 #ccc;
-          border-radius: 2px; }
-      div.main div.contents section.content.download-link {
-        background: #ccc; }
-        div.main div.contents section.content.download-link div.content-wrap {
-          text-align: center;
-          padding: 80px 0; }
+    div.main div.contents.top-page a.page-link {
+      float: right;
+      margin: 40px 15px;
+      padding: 5px 30px;
+      position: relative; }
+      div.main div.contents.top-page a.page-link:after {
+        position: absolute;
+        top: 50%;
+        margin: -7px 10px 0;
+        content: "";
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 7px solid transparent;
+        border-left: 10px solid #0093eb; }
+      div.main div.contents.top-page a.page-link:hover:after {
+        border-left: 10px solid #0071b5; }
+    div.main div.contents.top-page div.top-about div.about-description {
+      margin-right: 55%; }
+    div.main div.contents.top-page div.top-about p {
+      padding: 15px 0 0; }
+    div.main div.contents.top-page div.top-about div.app-ss {
+      float: right;
+      width: 50%;
+      margin: 0 0 20px 5%;
+      text-align: center; }
+      div.main div.contents.top-page div.top-about div.app-ss img.android-ss {
+        width: 48%;
+        float: left; }
+      div.main div.contents.top-page div.top-about div.app-ss img.iPhone-ss {
+        width: 48%;
+        float: right; }
+    div.main div.contents.events section.event-cards {
+      display: block;
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto 60px; }
+      div.main div.contents.events section.event-cards div.content-wrap {
+        padding: 0 40px; }
+      div.main div.contents.events section.event-cards div.event-card {
+        margin: 20px 40px;
+        padding: 20px 30px;
+        box-shadow: 0 1px 3px 0 #ccc;
+        border-radius: 2px; }
 
 footer.footer {
   width: 100vw;

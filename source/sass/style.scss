@@ -14,28 +14,6 @@ ol, ul {
   padding: 0;
 }
 
-html {
-  height: 100%;
-  width: 100%;
-  font-size: 1.1em;
-  background: white;
-  font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:focus {
-  outline: none;
-}
-
-.clearfix:after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
 
 //-----------------//
 //    variables    //
@@ -49,6 +27,47 @@ $brand-orange-normal: #ff8a00;
 $gray-light: #ccc;
 $gray-normal: #999;
 $gray-dark: #666;
+
+
+//-------------------//
+//    basic style    //
+//-------------------//
+
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 1.1em;
+  background: white;
+  font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif;
+}
+
+a {
+  text-decoration: none;
+  color: $brand-blue-normal;
+  font-weight: bold;
+}
+a:hover {
+  color: $brand-blue-dark;
+}
+
+a:focus {
+  outline: none;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+sup {
+  font-size: 0.75em;
+  vertical-align: top;
+  position: relative;
+  top: -0.2em;
+  margin: 0 0.2em;
+}
 
 //------------------//
 //    custom css    //
@@ -146,7 +165,12 @@ div.main {
         }
       }
       p {
-        line-height: 1.5em;
+        line-height: 1.7em;
+        &.footnote {
+          margin: 20px 0 0;
+          border: 1px solid #eee;
+          border-width: 1px 0 0;
+        }
       }
       ul {
         list-style: disc;
@@ -179,59 +203,55 @@ div.main {
         max-width: 1200px;
         padding: 60px 40px;
         margin: 0 auto;
-        div.parmosense{
-          div {
-            margin: 0 0 30px;
-            width: auto;
-            min-height: 300px;
-            img.content-image {
-              float: right;
-              width: 350px;
-              border-radius: 4px;
-              margin: -50px 30px 0 100px;
-            }
-            div.appsdetail{
-              float: left;
-              ul.description{
-                list-style: circle;
-                margin: 0 30px 30px;
-                li{
-                  width: auto;
-                  min-height: 20px;
-                }
-              }
-            }
-            div.appsimage{
-              float: right;
-              width: 400px;
-              text-align: center;
-              img{
-                width: 180px;
-              }
-              div.android{
-                float: left;
-                text-align: center;
-              }
-              div.iphone{
-                float: right;
-                text-align: center;
-              }
-
-            }
+      }
+    }
+    &.top-page {
+      a.page-link {
+        float: right;
+        margin: 40px 15px;
+        padding: 5px 30px;
+        position: relative;
+        &:after {
+          position: absolute;
+          top: 50%;
+          margin: -7px 10px 0;
+          content: "";
+          width: 0;
+          height: 0;
+          border-top: 7px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 7px solid transparent;
+          border-left: 10px solid $brand-blue-normal;
+        }
+        &:hover:after {
+          border-left: 10px solid $brand-blue-dark;
+        }
+      }
+      div.top-about {
+        div.about-description {
+          margin-right: 55%;
+        }
+        p {
+          padding: 15px 0 0;
+        }
+        div.app-ss {
+          float: right;
+          width: 50%;
+          margin: 0 0 20px 5%;
+          text-align: center;
+          img.android-ss {
+            width: 48%;
+            float: left;
+          }
+          img.iPhone-ss {
+            width: 48%;
+            float: right;
           }
         }
       }
-
-      &.download{
-        div.content-wrap{
-          div.download-link{
-            display:block;
-            text-align: center;
-          }
-        }
-      }
-
-      &.event-cards {
+    }
+    &.events {
+      section.event-cards {
         display: block;
         width: 100%;
         max-width: 1280px;
@@ -245,13 +265,6 @@ div.main {
           padding: 20px 30px;
           box-shadow: 0 1px 3px 0 #ccc;
           border-radius: 2px;
-        }
-      }
-      &.download-link {
-        background: $gray-light;
-        div.content-wrap {
-          text-align: center;
-          padding: 80px 0;
         }
       }
     }
