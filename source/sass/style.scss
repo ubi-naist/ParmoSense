@@ -161,12 +161,24 @@ div.main {
         }
       }
       p {
-        line-height: 1.7em;
+        padding: 20px 0 0;
+        line-height: 1.8em;
         &.footnote {
           margin: 20px 0;
           border: 1px solid #eee;
           border-width: 1px 0 0;
         }
+        img.full-width-img {
+          display: block;
+          width: 100%;
+          max-width: 1000px;
+          margin: 30px auto;
+        }
+      }
+      img.right-img {
+        float: right;
+        width: 30%;
+        margin: 0 0 10px 5%;
       }
       ul {
         list-style: disc;
@@ -240,9 +252,6 @@ div.main {
 
       div.left-description {
         margin-right: 55%;
-        p {
-          padding: 15px 0 0;
-        }
       }
       div.app-ss {
         float: right;
@@ -287,6 +296,25 @@ div.main {
         width: 50%;
         margin: 20px 0;
         float: right;
+      }
+    }
+    &.about {
+      div.slide-container {
+        display: block;
+        max-width: 800px;
+        width: 100%;
+        margin: 50px auto;
+        iframe {
+          width: 100%;
+          @media screen and (max-width: 760px) {
+            max-width: 600px;
+            height: 500px;
+          }
+          @media screen and (min-width: 760px) {
+            max-width: 800px;
+            height: 650px;
+          }
+        }
       }
     }
     &.events {
