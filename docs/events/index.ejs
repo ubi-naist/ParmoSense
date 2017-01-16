@@ -1,22 +1,150 @@
-<%- include('./template/header') -%>
+<%
+var absolutePath = filename.split("source/html/")[1].replace("index.ejs","");
+var rootPath = "../".repeat([absolutePath.split("/").length -1]);
+if(rootPath == "") { rootPath = "./"; }
+var pageName = absolutePath.replace("/", "");
+if(pageName == "") { pageName = "Top"}
+var param = {
+  pageName: pageName
+  absolutePath: "https://ubi-naist.github.io/ParmoSense/" + absolutePath,
+  rootPath: rootPath
+};
+-%>
+<%- include(param.rootPath + "template/header", {param: param}) -%>
+
+<%- include(param.rootPath + 'template/lodc') -%>
 
 <div class="main">
-  <div class="contents">
-    <section class="content events">
+  <div class="contents events">
+    <section class="content sub-page-top-visual">
       <div class="content-wrap">
-        <h1>Events</h1>
+        <h1>Events<span>イベント</span></h1>
+      </div>
+    </section>
+    <section class="content event-cards">
+      <div class="content-wrap">
+        <h1>Events archive</h1>
         <p>
-          Events
+          ParmoSense は、すでに多くの種類のイベントで導入されています。
         </p>
+        <ul>
+          <li>マッピングパーティ</li>
+          <li>スタンプラリーイベント</li>
+          <li>街歩きイベント</li>
+          <li>観光イベント</li>
+          <li>大学講義</li>
+        </ul>
+        <div class="event-card">
+          <h2>ユビキタス情報処理<span>講義での活用</span></h2>
+          <p>
+            奈良先端科学技術大学院大学で実施されている、
+            ユビキタスコンピューティングにおける基礎知識と応用技術を学ぶ「ユビキタス情報処理」という講義の、
+            “人を使った都市センシング” の実習課題として活用されました。
+          </p>
+          <p>
+            学生自身が ParmoSense を使って学内の様々な情報（樹木の情報や施設の故障など）を収集し、
+            地図へと可視化することで、「マッピングパーティ」や「Fix My Street」といった、
+            情報技術を活用した社会の取り組みを学びました。
+          </p>
+          <div class="event-photo">
+            <div>
+              <ul>
+                <li><img src="../img/events/ubiquitous_1.jpg"></li>
+                <li><img src="../img/events/ubiquitous_2.jpg"></li>
+                <li><img src="../img/events/ubiquitous_3.jpg"></li>
+                <li><img src="../img/events/ubiquitous_4.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <h2>びゅ〜っとあやせ<span>サイクルラリーでの活用</span></h2>
+          <p>
+            神奈川県綾瀬市で実施されているサイクルラリー（自転車に乗り市内のチェックポイントを巡る）イベントにて、
+            電子スタンプとして活用されました。
+          </p>
+          <p>
+            他の参加者の情報（チェックイン状況・ランキングなど）をお互いにシェアすることにより、
+            イベントに付加的な楽しみを提供しています。
+          </p>
+          <p class="event-reference">
+            <a href="https://www.facebook.com/ayasepromotion/">あやせプロモーションクラブ</a>
+          </p>
+          <div class="event-photo">
+            <div>
+              <ul>
+                <li><img src="../img/events/ayase_1.jpg"></li>
+                <li><img src="../img/events/ayase_2.jpg"></li>
+                <li><img src="../img/events/ayase_3.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <h2>オープンキャンパス in NAIST<span>スタンプラリーでの活用</span></h2>
+          <p>
+            奈良先端科学技術大学院大学の CICP（Creative and International Competitiveness Project）に採択されたプロジェクトの実証実験として実施された、
+            NAIST オープンキャンパスの電子スタンプラリーアプリとして活用されました。
+          </p>
+          <div class="event-photo">
+            <div>
+              <ul>
+                <li><img src="../img/events/naist_opencampus_1.jpg"></li>
+                <li><img src="../img/events/naist_opencampus_2.jpg"></li>
+                <li><img src="../img/events/naist_opencampus_3.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <h2>京都観光キュレーション実験<span>観光での活用</span></h2>
+          <p>
+            奈良先端科学技術大学院大学 情報科学研究科 ユビキタスコンピューティングシステム研究室「観光キュレーション」研究グループの、
+            京都における実証実験用のアプリとして活用されました。
+          </p>
+          <p>
+            キュレーションに用いるための情報の収集（事前調査）および、キュレーションした情報の被験者への提供という2つの役割を果たしています。
+          </p>
+          <div class="event-photo">
+            <div>
+              <ul>
+                <li><img src="../img/events/kyoto_1.jpg"></li>
+                <li><img src="../img/events/kyoto_2.jpg"></li>
+                <li><img src="../img/events/kyoto_3.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="event-card">
+          <h2>IKOMA Civic Tech Party vol.4 & 5<span>街歩き・マッピングパーティでの活用</span></h2>
+          <p>
+            【Vol.4】
+            観光ボランティアの方と一緒に街歩きをしながら、
+            普段気づかなかった地域の魅力的なスポットの位置情報＋写真を集めるイベント（マッピングパーティ）に活用されました。
+          </p>
+          <p>
+            【Vol.5】
+            収集した位置情報＋写真に情報（詳細な情報やコメントなど）を追加し、kml形式で出力、地図上にマッピングするワークショップに、
+            ParmoSense のラベリング機能・オープンデータ出力機能が活用されました。
+          </p>
+          <p class="event-reference">
+            <a href="https://ikoma-civic.tech/#event">IKOMA Civic Tech Award 2016 - Civic Tech Party</a>
+          </p>
+          <div class="event-photo">
+            <div>
+              <ul>
+                <li><img src="../img/events/ikoma_1.jpg"></li>
+                <li><img src="../img/events/ikoma_2.jpg"></li>
+                <li><img src="../img/events/ikoma_3.jpg"></li>
+                <li><img src="../img/events/ikoma_4.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="content download-link">
-      <div class="content-wrap">
-        <a href="https://play.google.com/store/apps/details?id=jp.naist.ubi_lab.parmo_sense"> <img src="../img/badge_googleplay.png" alt="ParmoSense Android"></a>
-        <a href="https://itunes.apple.com/jp/app/parmosense/id1184713498"><img src="../img/badge_appstore.png" alt="ParmoSense iOS"></a>
-      </div>
-    </section>
+
   </div>
 </div>
 
-<%- include('./template/footer') -%>
+<%- include('../template/footer') -%>

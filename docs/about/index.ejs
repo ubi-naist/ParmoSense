@@ -1,11 +1,13 @@
 <%
 var absolutePath = filename.split("source/html/")[1].replace("index.ejs","");
 var rootPath = "../".repeat([absolutePath.split("/").length -1]);
+if(rootPath == "") { rootPath = "./"; }
 var pageName = absolutePath.replace("/", "");
+if(pageName == "") { pageName = "top"}
 var param = {
-  pageName: pageName == "" ? "top" : pageName,
+  pageName: pageName,
   absolutePath: "https://ubi-naist.github.io/ParmoSense/" + absolutePath,
-  rootPath: rootPath == "" ? "./" : rootPath
+  rootPath: rootPath
 };
 -%>
 <%- include(param.rootPath + "template/header", {param: param}) -%>
@@ -48,4 +50,4 @@ var param = {
   </div>
 </div>
 
-<%- include(param.rootPath + 'template/footer') -%>
+<%- include('<%= param.rootPath %>template/footer') -%>

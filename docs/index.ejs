@@ -1,6 +1,18 @@
-<%- include('./template/header') -%>
+<%
+var absolutePath = filename.split("source/html/")[1].replace("index.ejs","");
+var rootPath = "../".repeat([absolutePath.split("/").length -1]);
+if(rootPath == "") { rootPath = "./"; }
+var pageName = absolutePath.replace("/", "");
+if(pageName == "") { pageName = "Top"}
+var param = {
+  pageName: pageName
+  absolutePath: "https://ubi-naist.github.io/ParmoSense/" + absolutePath,
+  rootPath: rootPath
+};
+-%>
+<%- include(param.rootPath + "template/header", {param: param}) -%>
 
-<%- include('../template/lodc') -%>
+<%- include(param.rootPath + "template/lodc") -%>
 
 <div class="main">
   <div class="contents top-page">
@@ -11,8 +23,8 @@
         <h1>ParmoSense<span>Platform for participatory mobile urban sensing</span></h1>
         <div class="top-about">
           <div class="app-ss">
-            <img class="android-ss" src="img/ss/android_1.png">
-            <img class="iPhone-ss" src="img/ss/iPhone_1.png">
+            <img class="android-ss" src="<%= param.rootPath %>img/ss/android_1.png">
+            <img class="iPhone-ss" src="<%= param.rootPath %>img/ss/iPhone_1.png">
           </div>
           <div class="left-description">
             <p>
@@ -27,7 +39,7 @@
             <p class="footnote">
               <sup>＊1</sup> ユーザ参加型モバイルセンシング
             </p>
-            <a href="about/" class="page-link">ParmoSense をもっと知る</a>
+            <a href="<%= param.rootPath %>about/" class="page-link">ParmoSense をもっと知る</a>
           </div>
         </div>
       </div>
@@ -44,24 +56,24 @@
       <div class="event-photos">
         <div>
           <ul>
-            <li><img src="img/events/naist_opencampus_1.jpg"></li>
-            <li><img src="img/events/naist_opencampus_2.jpg"></li>
-            <li><img src="img/events/naist_opencampus_3.jpg"></li>
-            <li><img src="img/events/ubiquitous_3.jpg"></li>
-            <li><img src="img/events/ubiquitous_2.jpg"></li>
-            <li><img src="img/events/ubiquitous_4.jpg"></li>
-            <li><img src="img/events/ikoma_1.jpg"></li>
-            <li><img src="img/events/ikoma_2.jpg"></li>
-            <li><img src="img/events/ikoma_3.jpg"></li>
-            <li><img src="img/events/ayase_1.jpg"></li>
-            <li><img src="img/events/ayase_2.jpg"></li>
-            <li><img src="img/events/kyoto_1.jpg"></li>
-            <li><img src="img/events/kyoto_2.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/naist_opencampus_1.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/naist_opencampus_2.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/naist_opencampus_3.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/ubiquitous_3.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/ubiquitous_2.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/ubiquitous_4.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/ikoma_1.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/ikoma_2.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/ikoma_3.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/ayase_1.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/ayase_2.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/kyoto_1.jpg"></li>
+            <li><img src="<%= param.rootPath %>img/events/kyoto_2.jpg"></li>
           </ul>
         </div>
       </div>
       <div class="content-wrap clearfix">
-        <a href="events/" class="page-link">ParmoSense の活用例</a>
+        <a href="<%= param.rootPath %>events/" class="page-link">ParmoSense の活用例</a>
       </div>
     </section>
 
@@ -71,7 +83,7 @@
         <p>
           ParmoSenseは、奈良先端科学技術大学院大学 情報科学研究科 ユビキタスコンピューティングシステム研究室 スマートシティ研究グループが開発しています。
         </p>
-        <a href="team/" class="page-link">開発チームメンバーについて</a>
+        <a href="<%= param.rootPath %>team/" class="page-link">開発チームメンバーについて</a>
       </div>
     </section>
 
@@ -87,11 +99,11 @@
             ParmoSenseは以下のリンクからダウンロード可能です。<br>
             端末のスペック要件については<a href="/download/">こちら</a>をご確認ください。
           </p>
-          <a href="team/" class="page-link">端末スペック要件を確認する</a>
+          <a href="<%= param.rootPath %>download/" class="page-link">端末スペック要件を確認する</a>
         </div>
       </div>
     </section>
-    
+
   </div>
 
-  <%- include('./template/footer') -%>
+  <%- include(param.rootPath + "template/footer") -%>

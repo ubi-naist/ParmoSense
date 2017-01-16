@@ -1,6 +1,16 @@
-<%- include('../template/header') -%>
+<%
+var absolutePath = filename.split("source/html/")[1].replace("index.ejs","");
+var rootPath = "../".repeat([absolutePath.split("/").length -1]);
+var pageName = absolutePath.replace("/", "");
+var param = {
+  pageName: pageName == "" ? "top" : pageName,
+  absolutePath: "https://ubi-naist.github.io/ParmoSense/" + absolutePath,
+  rootPath: rootPath == "" ? "./" : rootPath
+};
+-%>
+<%- include(param.rootPath + "template/header", {param: param}) -%>
 
-<%- include('../template/lodc') -%>
+<%- include(param.rootPath + 'template/lodc') -%>
 
 <div class="main">
   <div class="contents events">
@@ -135,4 +145,5 @@
   </div>
 </div>
 
-<%- include('../template/footer') -%>
+
+<%- include(param.rootPath + 'template/footer') -%>
