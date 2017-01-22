@@ -236,6 +236,21 @@ div.main {
         div.main div.contents.about div.slide-container iframe {
           max-width: 800px;
           height: 650px; } }
+  div.main div.contents.about div.movie-container {
+    display: block;
+    max-width: 800px;
+    width: 100%;
+    margin: 0px auto; }
+    div.main div.contents.about div.movie-container iframe {
+      width: 100%; }
+      @media screen and (max-width: 760px) {
+        div.main div.contents.about div.movie-container iframe {
+          max-width: 600px;
+          height: 340px; } }
+      @media screen and (min-width: 760px) {
+        div.main div.contents.about div.movie-container iframe {
+          max-width: 800px;
+          height: 450px; } }
   div.main div.contents.events section.event-cards {
     display: block;
     width: 100%;

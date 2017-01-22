@@ -230,6 +230,7 @@ div.main {
           color: #a8d8f4;
         }
       }
+
     }
     &.top-page {
       a.page-link {
@@ -320,7 +321,25 @@ div.main {
           }
         }
       }
+      div.movie-container {
+        display: block;
+        max-width: 800px;
+        width: 100%;
+        margin: 0px auto;
+        iframe {
+          width: 100%;
+          @media screen and (max-width: 760px) {
+            max-width: 600px;
+            height: 340px;
+          }
+          @media screen and (min-width: 760px) {
+            max-width: 800px;
+            height: 450px;
+          }
+        }
+      }
     }
+
     &.events {
       section.event-cards {
         display: block;
@@ -484,5 +503,3 @@ div.for-lod-challenge {
     height: auto;
   }
 }
-
-
