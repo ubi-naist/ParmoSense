@@ -503,3 +503,21 @@ div.for-lod-challenge {
     height: auto;
   }
 }
+
+
+
+
+a.for-urban-data-challenge {
+  position: fixed;
+  left: 40px;
+  bottom: 40px;
+  width: 240px;
+  height: 120px;
+  background: #f4002a url("../img/udc/udc.png") center center no-repeat;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px 0 black;
+  &:hover {
+    bottom: 39px;
+    box-shadow: 0 0 2px 0 black;
+  }
+}
