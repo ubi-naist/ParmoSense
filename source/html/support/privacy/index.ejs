@@ -1,0 +1,73 @@
+<%
+var absolutePath = filename.split("source/html/")[1].replace("index.ejs","");
+var rootPath = "../".repeat([absolutePath.split("/").length -1]);
+var pageName = absolutePath.replace("/", "");
+var param = {
+  pageName: pageName == "" ? "top" : pageName,
+  absolutePath: "https://ubi-naist.github.io/ParmoSense/" + absolutePath,
+  rootPath: rootPath == "" ? "./" : rootPath
+};
+-%>
+<%- include(param.rootPath + "template/header", {param: param}) -%>
+
+<div class="main">
+  <div class="contents privacy-policy">
+    <section class="content sub-page-top-visual">
+      <div class="content-wrap">
+        <h1>Privacy Policy<span>プライバシーポリシー</span></h1>
+      </div>
+    </section>
+    <section class="content">
+      <div class="content-wrap">
+        <h2>個人情報の収集・管理</h2>
+        <p>
+          ParmoSense（以下、当アプリ）は、ユーザ管理のためのアカウント情報（メールアドレス等）
+          および端末から取得可能な位置情報やセンサデータ、電波状況等（以下、個人情報）を収集します。
+          個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、
+          セキュリティシステムの維持・管理体制の整備を行います。
+        </p>
+        <h2>個人情報の利用目的</h2>
+        <p>
+          当アプリで収集した個人情報は、
+          奈良先端科学技術大学院大学情報科学研究科ユビキタスコンピューティングシステム研究室における研究を遂行するために使用します。
+        </p>
+        <h2>個人情報の第三者への公開</h2>
+        <p>
+          当アプリで収集した個人情報のうち、
+          写真やコメント、センサデータ等の一部は、
+          当アプリのサービスを提供するために必要な範囲で、
+          当アプリを利用する他のユーザに公開される可能性があります。
+        </p>
+        <p>
+          また、当アプリで収集した個人情報は、
+          個人が特定できないように配慮した状態で、
+          学会などの発表や、書籍やメディアなどの情報媒体への掲載を行うために使用されることがあります。
+        </p>
+        <h2>個人情報の照会</h2>
+        <p>
+          当アプリのユーザが自身の個人情報の照会を希望する場合には、本人であることを確認の上、対応いたします。
+        </p>
+        <h2>本プライバシーポリシーの改訂</h2>
+        <p>
+          本プライバシーポリシーは随時更新することができるものとします。
+          本プライバシーポリシーに重要な変更がある場合には、当アプリ上にて掲載するとともに、
+          下記の「最終更新日」に変更がなされた日を表示します。
+        </p>
+        <h2>問い合わせ先</h2>
+        <p>
+          本プライバシーポリシーについてのお問い合わせ、または個人情報の照会については、下記までご連絡ください。
+        </p>
+        <ul>
+          <li>〒630-0192 奈良県生駒市高山町8916-5</li>
+          <li>奈良先端科学技術大学院大学 情報科学研究科 ユビキタスコンピューティングシステム研究室</li>
+          <li><a href="http://ubi-lab.naist.jp/">http://ubi-lab.naist.jp/</a></li>
+          <li><a href="mailto:parmosense.naist@gmail.com">parmosense.naist<span class="at"></span>gmail.com</a></li>
+        </ul>
+        <h3>最終更新日： 2017年2月22日</h3>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<%- include(param.rootPath + 'template/footer') -%>

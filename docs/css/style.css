@@ -301,6 +301,22 @@ div.main {
   div.main div.contents.download a.download-link {
     display: block;
     margin: 0 0 80px; }
+  div.main div.contents.privacy-policy section.content h2, div.main div.contents.privacy-policy section.content h3 {
+    max-width: 800px;
+    margin: 40px auto 20px; }
+  div.main div.contents.privacy-policy section.content p {
+    padding: 10px 0;
+    max-width: 800px;
+    margin: 0 auto; }
+  div.main div.contents.privacy-policy section.content ul {
+    max-width: 800px;
+    margin: 0 auto; }
+    div.main div.contents.privacy-policy section.content ul li {
+      list-style: none;
+      min-height: 30px;
+      line-height: 30px; }
+      div.main div.contents.privacy-policy section.content ul li span.at:after {
+        content: "@"; }
 
 footer.footer {
   margin: 100px 0 0;
