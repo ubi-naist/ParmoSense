@@ -46,6 +46,9 @@ sup {
 .bg-gray {
   background: #f2f2f2; }
 
+b {
+  background: #fdf3ce; }
+
 header.menubar {
   display: block;
   width: 100%;
@@ -106,7 +109,8 @@ div.main {
       font-weight: bold; }
     div.main div.contents section.content h3 {
       font-size: 1.3em;
-      font-weight: bold; }
+      font-weight: bold;
+      margin: 30px 0 0; }
     div.main div.contents section.content h1 span, div.main div.contents section.content h2 span, div.main div.contents section.content h3 span {
       padding: 0 0 0 2ex;
       font-size: 0.7em;
@@ -201,7 +205,8 @@ div.main {
     display: block;
     height: 300px;
     width: 100%;
-    margin: -30px 0 -40px;
+    margin: -50px 0 0;
+    padding: 0 0 50px;
     overflow: hidden; }
     div.main div.contents.top-page div.event-photos div {
       width: 100%;

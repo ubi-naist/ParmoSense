@@ -47,7 +47,7 @@
     </section>
     <section class="content">
       <div class="content-wrap clearfix">
-        <h1>ParmoSense<span>Platform for participatory mobile urban sensing</span></h1>
+        <h1>ParmoSense<span>街にいる人が「気づき」を共有できるプラットフォーム</span></h1>
         <div class="top-about">
           <div class="app-ss">
             <img class="android-ss" src="./img/ss/android_1.png">
@@ -58,15 +58,16 @@
               ParmoSenseは、街歩き・観光・地域イベントなどの参加者が、互いに「位置情報」に紐づく「情報」をリアルタイムに共有するためのプラットフォームです。
             </p>
             <p>
-              また、リアルタイムな情報共有にとどまらず、共有されたデータの整理・解析により、都市環境情報を整備するためのアプリ<sup>＊1</sup>としても利用することができます。
+              目的やイベントごとに “グループ<sup>＊1</sup>” を作ることができ、<b>同じグループに参加している人だけで情報共有</b>することも可能です。
             </p>
             <p>
-              収集したデータは、Web API 経由で、XMLやJSON、KMLなど、オープンデータとして利用可能な形式として出力可能です。マッピングパーティやFix My Streetといった地域活動を支援することができます。
+              参加するには、スマホアプリ「ParmoSense」を入れるだけ。
+              <b>グループのQRコード</b>を読み込むことで、様々なグループに参加することができます。
             </p>
             <p class="footnote">
-              <sup>＊1</sup> ユーザ参加型モバイルセンシング
+              <sup>＊1</sup> グループごとに専用ParmoSenseアプリケーションが自動構築されます。
             </p>
-            <a href="./about/" class="page-link">ParmoSense をもっと知る</a>
+            <a href="./about/" class="page-link">ParmoSense についてもっと知る</a>
           </div>
         </div>
       </div>
@@ -79,6 +80,7 @@
           ParmoSenseは、学術研究や地域活動をはじめ、さまざまな用途に活用できます。<br>
           学術研究の実証実験や、地域のスタンプラリー・街歩きイベントなどですでに実稼働しています。
         </p>
+        <a href="./events/" class="page-link">ParmoSense の活用事例</a>
       </div>
       <div class="event-photos">
         <div>
@@ -99,12 +101,63 @@
           </ul>
         </div>
       </div>
-      <div class="content-wrap clearfix">
-        <a href="./events/" class="page-link">ParmoSense の活用例</a>
-      </div>
     </section>
 
     <section class="content">
+      <div class="content-wrap clearfix">
+        <h1>Research<span>Participatory mobile urban sensing</span></h1>
+        <div class="top-about">
+          <div class="app-ss">
+            <img class="android-ss" src="./img/ss/android_1.png">
+            <img class="iPhone-ss" src="./img/ss/iPhone_1.png">
+          </div>
+          <div class="left-description">
+            <p>
+              ParmoSenseは、奈良先端科学技術大学院大学 情報科学研究科 ユビキタスコンピューティング研究室 スマートシティ研究グループ にて開発されている研究プラットフォームです。
+              都市環境に眠る様々な情報を街中にいる人々のモバイルデバイスに搭載された “センサ” から収集する「ユーザ参加型センシング」の実験を ParmoSense を通じて行っています。
+            </p>
+            <h3>□ 収集可能な情報の例</h3>
+            <p>
+              ParmoSense では、様々なセンサからデータ収集することが可能<sup>＊1</sup>であるため、
+              幅広い都市環境の情報を収集することが可能になっています。
+            </p>
+            <ul>
+              <li><b>マイク・光センサ</b> …<br>
+                「車通り」や「夜道の明るさ」などの街の安全性情報</li>
+              <li><b>写真・移動履歴（GPS、加速度）</b> …<br>
+                「混雑度」や「フォトジェニックな場所」などの街の観光情報</li>
+            </ul>
+            <h3>□ ユーザ参加型センシングの魅力</h3>
+            <p>
+              ユーザ参加型センシングは、<b>街に住む人たち自らの手</b>で、
+              非常に幅広い都市環境を隅々まで集めることが可能になります。
+            </p>
+            <p>
+              近年では、行政に頼る文化から、
+              行政・市民が対等な関係で街をよくしてく<b>「市民協働」</b>の文化への変化が広まりつつあり、
+              全国各地で Fix My Street をはじめ、様々な活動が始まっています。
+            </p>
+            <p>
+              ParmoSense は、こうした活動において、
+              街の現状を知るための情報収集・可視化ツールとして活用することができます。
+            </p>
+            <h3>□ 集めたデータを活用する</h3>
+            <p>
+              収集したデータは、Web API 経由で、XMLやJSON、KMLなど、
+              <b>オープンデータとして利用可能な形式</b>として出力可能です。
+              マッピングパーティやFix My Streetといった地域活動を支援することができます。
+            </p>
+            <p class="footnote">
+              <sup>＊1</sup> 9軸センサ（加速度・ジャイロ・地磁気）、方位センサ、光センサ、
+              GPS、BLEスキャナ、外部デバイスとの連携（ウェアラブル）
+            </p>
+            <a href="./research/" class="page-link">ParmoSense に関する研究</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content bg-gray">
       <div class="content-wrap clearfix">
         <h1>Development Team<span>開発チーム</span></h1>
         <p>
@@ -114,7 +167,7 @@
       </div>
     </section>
 
-    <section class="content bg-gray">
+    <section class="content">
       <div class="content-wrap clearfix">
         <h1>Download<span>ダウンロード</span></h1>
         <div class="download-link">
