@@ -1,0 +1,32 @@
+<%
+var absolutePath = filename.split("source/html/")[1].replace("index.ejs","");
+var rootPath = "../".repeat([absolutePath.split("/").length -1]);
+var pageName = absolutePath.replace("/", "");
+var param = {
+  pageName: pageName == "" ? "top" : pageName,
+  absolutePath: "https://ubi-naist.github.io/ParmoSense/" + absolutePath,
+  rootPath: rootPath == "" ? "./" : rootPath
+};
+-%>
+<%- include(param.rootPath + "template/header", {param: param}) -%>
+<!-- 
+<%- include(param.rootPath + 'template/lodc') -%>
+
+<%- include(param.rootPath + "template/udc") -%>
+ -->
+<div class="main">
+  <div class="contents download">
+    <section class="content sub-page-top-visual">
+      <div class="content-wrap">
+        <h1>Research<span>研究活動</span></h1>
+      </div>
+    </section>
+    <section class="content">
+      <div class="content-wrap">
+      </div>
+    </section>
+  </div>
+</div>
+
+
+<%- include(param.rootPath + 'template/footer') -%>
