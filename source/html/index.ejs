@@ -15,6 +15,13 @@ var param = {
 <%- include(param.rootPath + "template/udc") -%>
 -->
 
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw7zqFoBdpJvZOUBl8SxHP6M0EtYM5h6M&callback=initMap"
+    async defer></script>
+<script src="js/map.js"></script>
 <div class="main">
   <div class="contents top-page">
     <section class="content top-visual">
@@ -81,15 +88,19 @@ var param = {
       <div class="content-wrap clearfix">
         <h1>Research<span>Participatory mobile urban sensing</span></h1>
         <div class="top-about">
-          <div class="app-ss">
-            <img class="android-ss" src="<%= param.rootPath %>img/ss/android_1.png">
-            <img class="iPhone-ss" src="<%= param.rootPath %>img/ss/iPhone_1.png">
-          </div>
-          <div class="left-description">
+          <div>
             <p>
               ParmoSenseは、奈良先端科学技術大学院大学 情報科学研究科 ユビキタスコンピューティング研究室 スマートシティ研究グループ にて開発されている研究プラットフォームです。
               都市環境に眠る様々な情報を街中にいる人々のモバイルデバイスに搭載された “センサ” から収集する「ユーザ参加型センシング」の実験を ParmoSense を通じて行っています。
             </p>
+          </div>
+          <div class="map-container">
+            <div id="map_canvas"></div>
+            <p>
+              夜道の明るさの収集結果例
+            </p>
+          </div>
+          <div class="left-description">
             <h3>□ 収集可能な情報の例</h3>
             <p>
               ParmoSense では、様々なセンサからデータ収集することが可能<sup>＊2</sup>であるため、
@@ -115,6 +126,8 @@ var param = {
               ParmoSense は、こうした活動において、
               街の現状を知るための情報収集・可視化ツールとして活用することができます。
             </p>
+          </div>
+          <div>
             <h3>□ 集めたデータを活用する</h3>
             <p>
               収集したデータは、Web API 経由で、XMLやJSON、KMLなど、

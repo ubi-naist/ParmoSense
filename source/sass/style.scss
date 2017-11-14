@@ -41,6 +41,7 @@ $text-highlight-blue: #dcf1ff;
 html {
   height: 100%;
   width: 100%;
+  min-width: 800px;
   font-size: 1.1em;
   background: white;
   font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif;
@@ -90,6 +91,7 @@ header.menubar {
   display: block;
   width: 100%;
   height: 100px;
+  min-width: 800px;
   background: $brand-blue-dark;
   opacity: 0.9;
   position: fixed;
@@ -97,6 +99,7 @@ header.menubar {
   div.action-wrap {
     display: block;
     width: 100%;
+    min-width: 800px;
     max-width: 1280px;
     margin: 0 auto;
     img {
@@ -133,6 +136,11 @@ header.menubar {
             background: rgba(255, 255, 255, 0.1);
           }
         }
+        @media (max-width: 1000px) {
+          a {
+            padding: 0 20px;
+          }
+        }
       }
     }
   }
@@ -141,9 +149,11 @@ header.menubar {
 div.main {
   min-height: 100vh;
   width: 100vw;
+  min-width: 800px;
   div.contents {
     section.content {
       width: 100vw;
+      min-width: 800px;
       h1 {
         font-size: 2em;
         line-height: 1.2em;
@@ -283,8 +293,10 @@ div.main {
         }
       }
 
-      div.left-description {
-        margin-right: 55%;
+      @media (min-width: 900px) {
+        div.left-description {
+          margin-right: 55%;
+        }
       }
       div.app-ss {
         float: right;
@@ -298,6 +310,18 @@ div.main {
         img.iPhone-ss {
           width: 48%;
           float: right;
+        }
+      }
+      div.map-container {
+        float: right;
+        width: 50%;
+        padding: 50px 0 0 20px;
+        div#map_canvas {
+          width: 100%;
+          height: 700px;
+          @media (max-width: 900px) {
+            height: 400px;
+          }
         }
       }
       div.event-photos {
@@ -485,6 +509,7 @@ div.main {
 footer.footer {
   margin: 100px 0 0;
   width: 100vw;
+  min-width: 800px;
   div{
     display: block;
     width: 100%;
@@ -527,6 +552,11 @@ footer.footer {
   }
 }
 
+div#map_canvas {
+  display: block;
+  height: 800px;
+  width: 1000px;
+}
 
 
 a.for-lod-challenge {

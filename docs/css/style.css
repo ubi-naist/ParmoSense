@@ -16,6 +16,7 @@ ol, ul {
 html {
   height: 100%;
   width: 100%;
+  min-width: 800px;
   font-size: 1.1em;
   background: white;
   font-family: "leitura-news", "a-otf-ud-reimin-pr6n", serif; }
@@ -53,6 +54,7 @@ header.menubar {
   display: block;
   width: 100%;
   height: 100px;
+  min-width: 800px;
   background: #0071b5;
   opacity: 0.9;
   position: fixed;
@@ -60,6 +62,7 @@ header.menubar {
   header.menubar div.action-wrap {
     display: block;
     width: 100%;
+    min-width: 800px;
     max-width: 1280px;
     margin: 0 auto; }
     header.menubar div.action-wrap img {
@@ -91,12 +94,17 @@ header.menubar {
           letter-spacing: 2px; }
           header.menubar div.action-wrap nav ul li a:hover {
             background: rgba(255, 255, 255, 0.1); }
+        @media (max-width: 1000px) {
+          header.menubar div.action-wrap nav ul li a {
+            padding: 0 20px; } }
 
 div.main {
   min-height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  min-width: 800px; }
   div.main div.contents section.content {
-    width: 100vw; }
+    width: 100vw;
+    min-width: 800px; }
     div.main div.contents section.content h1 {
       font-size: 2em;
       line-height: 1.2em;
@@ -202,8 +210,9 @@ div.main {
       border-left: 10px solid #ff8a00; }
     div.main div.contents.top-page a.page-link:hover:after {
       border-left: 10px solid #cf7000; }
-  div.main div.contents.top-page div.left-description {
-    margin-right: 55%; }
+  @media (min-width: 900px) {
+    div.main div.contents.top-page div.left-description {
+      margin-right: 55%; } }
   div.main div.contents.top-page div.app-ss {
     float: right;
     width: 50%;
@@ -215,6 +224,16 @@ div.main {
     div.main div.contents.top-page div.app-ss img.iPhone-ss {
       width: 48%;
       float: right; }
+  div.main div.contents.top-page div.map-container {
+    float: right;
+    width: 50%;
+    padding: 50px 0 0 20px; }
+    div.main div.contents.top-page div.map-container div#map_canvas {
+      width: 100%;
+      height: 700px; }
+      @media (max-width: 900px) {
+        div.main div.contents.top-page div.map-container div#map_canvas {
+          height: 400px; } }
   div.main div.contents.top-page div.event-photos {
     display: block;
     height: 300px;
@@ -349,7 +368,8 @@ div.main {
 
 footer.footer {
   margin: 100px 0 0;
-  width: 100vw; }
+  width: 100vw;
+  min-width: 800px; }
   footer.footer div {
     display: block;
     width: 100%; }
@@ -381,6 +401,11 @@ footer.footer {
           margin: 10px; }
       footer.footer div.footer-wrap span.gmail-domain:before {
         content: "@gmail.com"; }
+
+div#map_canvas {
+  display: block;
+  height: 800px;
+  width: 1000px; }
 
 a.for-lod-challenge {
   position: fixed;
