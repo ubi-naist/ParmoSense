@@ -151,13 +151,13 @@ div.main {
       h2 {
         font-size: 1.5em;
         line-height: 1.2em;
-        margin: 30px 0 15px;
+        margin: 40px 0 5px;
         font-weight: bold;
       }
       h3 {
         font-size: 1.3em;
         font-weight: bold;
-        margin: 30px 0 0;
+        padding: 50px 0 0;
       }
       h1, h2, h3 {
         span {
@@ -170,7 +170,7 @@ div.main {
         padding: 20px 0 0;
         line-height: 1.8em;
         &.footnote {
-          margin: 20px 0;
+          margin: 20px 0 0;
           border: 1px solid #eee;
           border-width: 1px 0 0;
         }
@@ -178,7 +178,7 @@ div.main {
           display: block;
           width: 100%;
           max-width: 1000px;
-          margin: 30px auto;
+          margin: 30px auto 0;
         }
       }
       img.right-img {
@@ -214,6 +214,9 @@ div.main {
             }
           }
         }
+      }
+      ul + p {
+        padding: 0;
       }
       div.content-wrap {
         display: block;
@@ -310,7 +313,7 @@ div.main {
         float: right;
       }
     }
-    &.about {
+    &.about, &.research {
       div.slide-container {
         display: block;
         max-width: 800px;
@@ -332,7 +335,7 @@ div.main {
         display: block;
         max-width: 800px;
         width: 100%;
-        margin: 0px auto;
+        margin: 0px auto 40px;
         iframe {
           width: 100%;
           @media screen and (max-width: 760px) {
