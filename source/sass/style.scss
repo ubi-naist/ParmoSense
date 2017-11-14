@@ -450,21 +450,34 @@ div.main {
     &.team {
       section.content {
         p.bio {
+          margin: 0 0 0 230px;
           font-size: 0.9em;
           line-height: 1.6em;
         }
         ul.member {
           margin: 30px 0 0;
+          & > li {
+            padding: 50px 0 0;
+          }
         }
-        ul.work li {
-          min-height: auto;
-          list-style: none;
-          float: left;
-          padding: 5px 10px;
-          margin: 0 10px 0 0;
-          color: #0093eb;
-          border: 1px solid #0093eb;
-          border-radius: 3px;
+        ul.work {
+          margin: 0 0 0 230px;
+          li {
+            min-height: auto;
+            list-style: none;
+            float: left;
+            padding: 5px 10px;
+            margin: 0 10px 10px 0;
+            color: #0093eb;
+            border: 1px solid #0093eb;
+            border-radius: 3px;
+          }
+        }
+        h3 {
+          background: transparent;
+          margin: 0;
+          padding: 0;
+          font-size: 1.5em;
         }
       }
     }

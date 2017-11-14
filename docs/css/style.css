@@ -331,19 +331,29 @@ div.main {
         height: 200px;
         width: auto; }
   div.main div.contents.team section.content p.bio {
+    margin: 0 0 0 230px;
     font-size: 0.9em;
     line-height: 1.6em; }
   div.main div.contents.team section.content ul.member {
     margin: 30px 0 0; }
-  div.main div.contents.team section.content ul.work li {
-    min-height: auto;
-    list-style: none;
-    float: left;
-    padding: 5px 10px;
-    margin: 0 10px 0 0;
-    color: #0093eb;
-    border: 1px solid #0093eb;
-    border-radius: 3px; }
+    div.main div.contents.team section.content ul.member > li {
+      padding: 50px 0 0; }
+  div.main div.contents.team section.content ul.work {
+    margin: 0 0 0 230px; }
+    div.main div.contents.team section.content ul.work li {
+      min-height: auto;
+      list-style: none;
+      float: left;
+      padding: 5px 10px;
+      margin: 0 10px 10px 0;
+      color: #0093eb;
+      border: 1px solid #0093eb;
+      border-radius: 3px; }
+  div.main div.contents.team section.content h3 {
+    background: transparent;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em; }
   div.main div.contents.download ul.requirement {
     margin: 0 0 20px; }
   div.main div.contents.download a.download-link {
