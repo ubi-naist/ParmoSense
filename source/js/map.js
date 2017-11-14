@@ -7,10 +7,10 @@ function initMap() {
   };
   var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
-  xmlPlot(map, "/js/data/flu.xml", "/img/map/icon/1.png");
-  xmlPlot(map, "/js/data/inv.xml", "/img/map/icon/3.png");
-  xmlPlot(map, "/js/data/led.xml", "/img/map/icon/5.png");
-  xmlPlot(map, "/js/data/etc.xml", "/img/map/icon/0.png");
+  xmlPlot(map, "js/data/flu.xml", "img/map/icon/1.png");
+  xmlPlot(map, "js/data/inv.xml", "img/map/icon/3.png");
+  xmlPlot(map, "js/data/led.xml", "img/map/icon/5.png");
+  xmlPlot(map, "js/data/etc.xml", "img/map/icon/0.png");
 
 }
 
