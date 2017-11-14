@@ -218,6 +218,12 @@ div.main {
       ul + p {
         padding: 0;
       }
+      ol {
+        li {
+          margin: 5px 0 5px 30px;
+          list-style: decimal-leading-zero;
+        }
+      }
       div.content-wrap {
         display: block;
         width: auto;

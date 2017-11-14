@@ -155,6 +155,9 @@ div.main {
             font-size: 0.8em; }
     div.main div.contents section.content ul + p {
       padding: 0; }
+    div.main div.contents section.content ol li {
+      margin: 5px 0 5px 30px;
+      list-style: decimal-leading-zero; }
     div.main div.contents section.content div.content-wrap {
       display: block;
       width: auto;
