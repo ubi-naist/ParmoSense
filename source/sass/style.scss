@@ -29,7 +29,9 @@ $gray-light: #ccc;
 $gray-normal: #999;
 $gray-dark: #666;
 
-$text-highlight: #fdf3ce;
+$text-highlight-yellow: #fdf3ce;
+$text-highlight-blue: #dcf1ff;
+
 
 //-------------------//
 //    basic style    //
@@ -76,7 +78,7 @@ sup {
 }
 
 b {
-  background: $text-highlight;
+  background: $text-highlight-yellow;
 }
 
 
@@ -151,13 +153,21 @@ div.main {
       h2 {
         font-size: 1.5em;
         line-height: 1.2em;
-        padding: 40px 0 5px;
+        padding: 40px 0 0;
         font-weight: bold;
       }
       h3 {
+        display: inline-block;
         font-size: 1.3em;
         font-weight: bold;
-        padding: 50px 0 0;
+        padding: 5px 10px;
+        margin: 50px 0 0;
+        background: $text-highlight-blue;
+      }
+      h4 {
+        font-size: 1.2em;
+        font-weight: bold;
+        padding: 20px 0 5px;
       }
       h1, h2, h3 {
         span {
@@ -167,7 +177,7 @@ div.main {
         }
       }
       h1 + h2, h2 + h3 {
-        margin: -30px 0 0;
+        margin: 20px 0 0;
       }
       p {
         padding: 20px 0 0;
@@ -191,9 +201,9 @@ div.main {
       }
       ul {
         list-style: disc;
-        padding: 10px 0;
+        padding: 10pxSign;
         li {
-          margin: 2px 0 2px 25px;
+          margin: 2px 0 2px 50px;
           ul {
             list-style: circle;
             padding: 8px 0;
@@ -323,6 +333,18 @@ div.main {
       }
     }
     &.about, &.research {
+      div.card-container {
+        margin: 20px 0;
+        padding: 20px 30px;
+        box-shadow: 0 1px 3px 0 #ccc;
+        border-radius: 2px;
+        h3 {
+          margin: 0;
+        }
+        div.movie-container {
+          padding: 30px 0;
+        }
+      }
       div.slide-container {
         display: block;
         max-width: 800px;
@@ -344,7 +366,8 @@ div.main {
         display: block;
         max-width: 800px;
         width: 100%;
-        margin: 0px auto 40px;
+        margin: 0px auto;
+        padding: 0 0 50px;
         iframe {
           width: 100%;
           @media screen and (max-width: 760px) {

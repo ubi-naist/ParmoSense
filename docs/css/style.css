@@ -105,18 +105,25 @@ div.main {
     div.main div.contents section.content h2 {
       font-size: 1.5em;
       line-height: 1.2em;
-      padding: 40px 0 5px;
+      padding: 40px 0 0;
       font-weight: bold; }
     div.main div.contents section.content h3 {
+      display: inline-block;
       font-size: 1.3em;
       font-weight: bold;
-      padding: 50px 0 0; }
+      padding: 5px 10px;
+      margin: 50px 0 0;
+      background: #dcf1ff; }
+    div.main div.contents section.content h4 {
+      font-size: 1.2em;
+      font-weight: bold;
+      padding: 20px 0 5px; }
     div.main div.contents section.content h1 span, div.main div.contents section.content h2 span, div.main div.contents section.content h3 span {
       padding: 0 0 0 2ex;
       font-size: 0.7em;
       color: #666; }
     div.main div.contents section.content h1 + h2, div.main div.contents section.content h2 + h3 {
-      margin: -30px 0 0; }
+      margin: 20px 0 0; }
     div.main div.contents section.content p {
       padding: 20px 0 0;
       line-height: 1.8em; }
@@ -135,9 +142,9 @@ div.main {
       margin: 0 0 30px 5%; }
     div.main div.contents section.content ul {
       list-style: disc;
-      padding: 10px 0; }
+      padding: 10pxSign; }
       div.main div.contents section.content ul li {
-        margin: 2px 0 2px 25px; }
+        margin: 2px 0 2px 50px; }
         div.main div.contents section.content ul li ul {
           list-style: circle;
           padding: 8px 0; }
@@ -233,6 +240,15 @@ div.main {
     width: 50%;
     margin: 20px 0;
     float: right; }
+  div.main div.contents.about div.card-container, div.main div.contents.research div.card-container {
+    margin: 20px 0;
+    padding: 20px 30px;
+    box-shadow: 0 1px 3px 0 #ccc;
+    border-radius: 2px; }
+    div.main div.contents.about div.card-container h3, div.main div.contents.research div.card-container h3 {
+      margin: 0; }
+    div.main div.contents.about div.card-container div.movie-container, div.main div.contents.research div.card-container div.movie-container {
+      padding: 30px 0; }
   div.main div.contents.about div.slide-container, div.main div.contents.research div.slide-container {
     display: block;
     max-width: 800px;
@@ -252,7 +268,8 @@ div.main {
     display: block;
     max-width: 800px;
     width: 100%;
-    margin: 0px auto 40px; }
+    margin: 0px auto;
+    padding: 0 0 50px; }
     div.main div.contents.about div.movie-container iframe, div.main div.contents.research div.movie-container iframe {
       width: 100%; }
       @media screen and (max-width: 760px) {
