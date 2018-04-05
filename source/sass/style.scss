@@ -407,6 +407,29 @@ div.main {
           }
         }
       }
+      ol.publication {
+        li {
+          margin: 5px 0 15px 30px;
+          line-height: 1.7em;
+        }
+        ul.awards {
+          li {
+            float: left;
+            list-style: none;
+            padding: 15px 15px 10px;
+            margin: 5px 10px 5px 0;
+            border: 1px solid $brand-orange-normal;
+            border-radius: 3px;
+            color: $brand-orange-normal;
+            line-height: 1em;
+          }
+          &:after {
+            content: "";
+            display: block;
+            clear: both;
+          }
+        }
+      }
     }
 
     &.events {
@@ -422,6 +445,14 @@ div.main {
           border-radius: 2px;
           p.event-reference {
             margin: 15px 0 0;
+          }
+          span.event-date {
+            display: block;
+            margin: 7px 0 5px;
+            padding: 2px 3px;
+            border: 1px solid #eee;
+            border-width: 1px 0;
+            color: #999;
           }
         }
         div.event-photo {

@@ -301,6 +301,22 @@ div.main {
         div.main div.contents.about div.movie-container iframe, div.main div.contents.research div.movie-container iframe {
           max-width: 800px;
           height: 450px; } }
+  div.main div.contents.about ol.publication li, div.main div.contents.research ol.publication li {
+    margin: 5px 0 15px 30px;
+    line-height: 1.7em; }
+  div.main div.contents.about ol.publication ul.awards li, div.main div.contents.research ol.publication ul.awards li {
+    float: left;
+    list-style: none;
+    padding: 15px 15px 10px;
+    margin: 5px 10px 5px 0;
+    border: 1px solid #ff8a00;
+    border-radius: 3px;
+    color: #ff8a00;
+    line-height: 1em; }
+  div.main div.contents.about ol.publication ul.awards:after, div.main div.contents.research ol.publication ul.awards:after {
+    content: "";
+    display: block;
+    clear: both; }
   div.main div.contents.events section.event-cards {
     display: block;
     width: 100%;
@@ -313,6 +329,13 @@ div.main {
       border-radius: 2px; }
       div.main div.contents.events section.event-cards div.event-card p.event-reference {
         margin: 15px 0 0; }
+      div.main div.contents.events section.event-cards div.event-card span.event-date {
+        display: block;
+        margin: 7px 0 5px;
+        padding: 2px 3px;
+        border: 1px solid #eee;
+        border-width: 1px 0;
+        color: #999; }
     div.main div.contents.events section.event-cards div.event-photo {
       height: 200px;
       width: 100%;
