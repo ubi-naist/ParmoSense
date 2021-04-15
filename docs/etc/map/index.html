@@ -1,13 +1,3 @@
-<%
-var absolutePath = filename.split("source/html/")[1].replace("index.ejs","");
-var rootPath = "../".repeat([absolutePath.split("/").length -1]);
-var pageName = absolutePath.replace("/", "");
-var param = {
-  pageName: pageName == "" ? "top" : pageName,
-  absolutePath: "https://www.parmosense.jp/" + absolutePath,
-  rootPath: rootPath == "" ? "./" : rootPath
-};
--%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,10 +30,10 @@ function initMap() {
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
   var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-  xmlPlot(map, "../js/data/flu.xml", "../img/map/icon/1.png");
-  xmlPlot(map, "../js/data/inv.xml", "../img/map/icon/3.png");
-  xmlPlot(map, "../js/data/led.xml", "../img/map/icon/5.png");
-  xmlPlot(map, "../js/data/etc.xml", "../img/map/icon/0.png");
+  xmlPlot(map, "../../js/data/flu.xml", "../../img/map/icon/1.png");
+  xmlPlot(map, "../../js/data/inv.xml", "../../img/map/icon/3.png");
+  xmlPlot(map, "../../js/data/led.xml", "../../img/map/icon/5.png");
+  xmlPlot(map, "../../js/data/etc.xml", "../../img/map/icon/0.png");
 }
 
 function xmlPlot(map, fileName, icon) {
