@@ -1,14 +1,41 @@
-<%
-var absolutePath = filename.split("source/html/")[1].replace("index.ejs","");
-var rootPath = "../".repeat([absolutePath.split("/").length -1]);
-var pageName = absolutePath.replace("/", "");
-var param = {
-  pageName: pageName == "" ? "top" : pageName,
-  absolutePath: "https://ubi-naist.github.io/ParmoSense/" + absolutePath,
-  rootPath: rootPath == "" ? "./" : rootPath
-};
--%>
-<%- include(param.rootPath + "template/header", {param: param}) -%>
+<!DOCTYPE html>
+<html>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <meta charset="UTF-8">
+  <title>ParmoSense | etcurban-data-challenge/</title>
+  <meta name="viewport" content="width=800px">
+
+  <meta property="og:title" content="ParmoSense | etcurban-data-challenge/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://ubi-naist.github.io/ParmoSense/etc/urban-data-challenge/" />
+  <meta property="og:image" content="https://ubi-naist.github.io/ParmoSense/img/ogp/parmosense.png" />
+  <meta property="og:site_name" content="ParmoSense" />
+  <meta property="og:description" content="ParmoSenseは、街歩き・観光・地域イベントなどの参加者が、互いに「位置情報」に紐づく「情報」をリアルタイムに共有するためのプラットフォームです。" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@naist_ubi" />
+  <meta property="fb:app_id" content="1239994606080052" />
+
+  <link rel="stylesheet" href="/ParmoSense/css/style.css">
+  <script src="https://use.typekit.net/ikc1arp.js"></script>
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+<body>
+
+<header class="menubar">
+  <div class="action-wrap">
+    <a href="/ParmoSense/"><h1><span>ParmoSense</span></h1></a>
+    <nav>
+      <ul>
+        <li><a href="/ParmoSense/about/">About</a></li>
+        <li><a href="/ParmoSense/research/">Research</a></li>
+        <li><a href="/ParmoSense/events/">Events</a></li>
+        <li><a href="/ParmoSense/team/">Team</a></li>
+        <li><a href="/ParmoSense/download/">Download</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
 <div class="main">
   <div class="contents for-lod-challenge">
@@ -27,12 +54,12 @@ var param = {
             端末のスペック要件については<a href="/download/">こちら</a>をご確認ください。
           </p>
           <div class="download-link">
-            <a href="https://play.google.com/store/apps/details?id=jp.naist.ubi_lab.parmo_sense"> <img src="../img/badge_googleplay.png" alt="ParmoSense Android"></a>
-            <a href="https://itunes.apple.com/jp/app/parmosense/id1184713498"><img src="../img/badge_appstore.png" alt="ParmoSense iOS"></a>
+            <a href="https://play.google.com/store/apps/details?id=jp.naist.ubi_lab.parmo_sense"> <img src="../../img/badge_googleplay.png" alt="ParmoSense Android"></a>
+            <a href="https://itunes.apple.com/jp/app/parmosense/id1184713498"><img src="../../img/badge_appstore.png" alt="ParmoSense iOS"></a>
           </div>
         </div>
         <div class="lodc-step clearfix">
-          <img src="../img/lodc/step2.png" class="right-img">
+          <img src="../../img/lodc/step2.png" class="right-img">
           <h2>② デモモードの起動</h2>
           <p>
             インストールした ParmoSense スマートフォンアプリを起動すると、
@@ -43,7 +70,7 @@ var param = {
           <p>※通常、ParmoSenseを利用するためには、ログインが必要となります。</p>
         </div>
         <div class="lodc-step clearfix">
-          <img src="../img/lodc/step3.png" class="right-img">
+          <img src="../../img/lodc/step3.png" class="right-img">
           <h2>③ 写真を撮影する</h2>
           <p>
             共有する情報として写真をアップロードできるようになっています。
@@ -53,7 +80,7 @@ var param = {
           </p>
         </div>
         <div class="lodc-step clearfix">
-          <img src="../img/lodc/step4.png" class="right-img">
+          <img src="../../img/lodc/step4.png" class="right-img">
           <h2>④ 他のユーザが共有した情報を見る</h2>
           <p>
             他のユーザが共有した情報は、リアルタイムに「地図」上と「タイムライン」上に反映されます。
@@ -66,7 +93,7 @@ var param = {
         </div>
         <h1>■ オープンデータ化</h1>
         <div class="lodc-step clearfix">
-          <img src="../img/lodc/edit.png" class="right-img">
+          <img src="../../img/lodc/edit.png" class="right-img">
           <h2>⑤ 情報を選別・編集する</h2>
           <p>
             共有された情報を使って、<a href="http://sv01.ubi-lab.com/Parmo/26/edit/">データ編集システム</a>上から選別や編集することにより、より品質の高いデータを生成することが可能です。
@@ -102,4 +129,34 @@ var param = {
 </div>
 
 
-<%- include(param.rootPath + 'template/footer') -%>
+
+<footer class="footer">
+  <div class="footer-image">
+  <div class="footer-wrap">
+    <nav>
+      <ul class="site-link">
+        <li>
+          <li><a href="/ParmoSense/">Home</a></li>
+          <li><a href="/ParmoSense/about/">About</a></li>
+          <li><a href="/ParmoSense/events/">Events</a></li>
+          <li><a href="/ParmoSense/team/">Team</a></li>
+          <li><a href="/ParmoSense/download/">Download</a></li>
+          <li><a href="mailto:parmosense.naist@gmail.com">Contact</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul class="ex-link">
+        <!-- <li>
+          <a href="https://twitter.com/share"
+          class="twitter-share-button"
+          data-url="https://ubi-naist.github.io/ParmoSense/"
+          data-text="ParmoSenseを使ってみんなでオープンデータを作ろう！"></a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+      </ul> -->
+    </nav>
+    <a href="http://ubi-lab.naist.jp/"><img src="/ParmoSense/img/logo_naist-ubi.png"></a>
+    <p><small>&copy; ParmoSense, Ubiquitous Computing Systems Lab., Nara Institute of Science and Technology.</small></p>
+  </div>
+</footer>
+</body>
+</html>

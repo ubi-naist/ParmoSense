@@ -1,13 +1,46 @@
-var gulp = require("gulp");
-var fs = require("fs");
-var ejs = require("gulp-ejs");
-var sass = require("gulp-sass");
-var uglify = require("gulp-uglify");
-var browser = require("browser-sync");
-var plumber = require("gulp-plumber");
+// gulp v4.0.2
 
-gulp.task("server", function() {
-    browser({
+const gulp        = require("gulp"),
+      fs          = require("fs"),
+      ejs         = require("gulp-ejs"),
+      data        = require("gulp-data"),
+      rename      = require("gulp-rename"),
+      sass        = require("gulp-sass"),
+      uglify      = require("gulp-uglify"),
+      cleanCSS    = require("gulp-clean-css"),
+      plumber     = require("gulp-plumber"),
+      browser     = require("browser-sync")
+      mmq         = require("gulp-merge-media-queries");
+
+const cleanCSS_1stSettings = 
+  { // ref: https://outcloud.blogspot.com/2018/09/Minify-CSS-by-CleanCSS-MergeMediaQuery.html
+    level: {
+      1: {
+        roundingPrecision : 3
+      },
+      2: {
+        removeDuplicateFontRules: true,
+        removeDuplicateMediaBlocks: true,
+        removeDuplicateRules: true,
+        mergeSemantically: true,
+        removeUnusedAtRules: true,
+        restructureRules: true
+      }
+    }
+  };
+
+const cleanCSS_2ndSettings =
+  {
+    level: {
+      1: {
+        all: false,
+        removeWhitespace: true
+      }
+    }
+  };
+
+gulp.task("server", function(done) {
+    browser.init({
         server: {
             baseDir: "./docs",
             startPath: '/ParmoSense/',
@@ -16,39 +49,46 @@ gulp.task("server", function() {
             }
         }
     });
+    done();
 });
 
 gulp.task("ejs", function() {
-    var json = JSON.parse(fs.readFileSync("./source/html/variables.json"));
-    gulp.src(["./source/html/**/*.ejs", "!./source/html/template/*.ejs"], { base: "./source/html" })
+  var json = JSON.parse(fs.readFileSync("./source/html/variables.json"));
+  return gulp.src(["./source/html/**/*.ejs", "!./source/html/template/*.ejs"], { base: "./source/html" })
         .pipe(plumber())
-        .pipe(ejs(json, {"ext": ".html"}))
-        .pipe(gulp.dest("./docs"))
-        .pipe(browser.reload({stream:true}));
+        .pipe(data(file => {
+          return {
+            'filename': file.path
+          }
+        }))
+        .pipe(ejs(json))
+        .pipe(rename({extname:'.html'}))
+        .pipe(gulp.dest("./docs"));
 });
- 
+
 gulp.task("sass", function() {
-    gulp.src("./source/sass/**/*scss")
-        .pipe(plumber())
-        .pipe(sass())
-        .pipe(gulp.dest("./docs/css"))
-        .pipe(browser.reload({stream:true}));
+  return gulp.src("./source/sass/**/*scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(cleanCSS(cleanCSS_1stSettings))
+    .pipe(mmq())
+    .pipe(cleanCSS(cleanCSS_2ndSettings))
+    .pipe(gulp.dest("./docs/css/"));
 });
 
 gulp.task("js", function() {
-    gulp.src(["./source/js/**/*.js"])
-        .pipe(plumber())
-        .pipe(uglify())
-        .pipe(gulp.dest("./docs/js"))
-        .pipe(browser.reload({stream:true}));
+  return gulp.src("./source/js/**/*.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("./docs/js/"));
 });
 
-gulp.task("reload", function() {
-    browser.reload();
+// watch
+gulp.task("watch", (done) => {
+  gulp.watch("./source/html/**/*.ejs",  gulp.series("ejs"));
+  gulp.watch("./source/js/**/*.js",     gulp.series("js"));
+  gulp.watch("./source/sass/**/*.scss", gulp.series("sass"));
+  done();
 });
 
-gulp.task("default", ["server"], function() {
-    gulp.watch("./source/html/**/*.ejs", ["ejs"]);
-    gulp.watch("./source/js/**/*.js",["js"]);
-    gulp.watch("./source/sass/**/*.scss",["sass"]);
-});
+// scripts tasks
+gulp.task('default', gulp.series('watch', 'server'));
