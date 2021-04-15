@@ -43,9 +43,9 @@ gulp.task("server", function(done) {
     browser.init({
         server: {
             baseDir: "./docs",
-            startPath: '/ParmoSense/',
+            startPath: '/',
             routes : {
-                '/ParmoSense': 'docs'
+                '/': 'docs'
             }
         }
     });
