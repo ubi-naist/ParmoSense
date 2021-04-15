@@ -258,6 +258,9 @@ div.main {
         height: 100vh;
         margin: 0 0 30px;
         background: $brand-blue-normal url("../img/logo_parmosense_top.png") center center no-repeat;
+        h1 {
+          display: none;
+        }
       }
       &.sub-page-top-visual {
         margin: 0 0 60px;
