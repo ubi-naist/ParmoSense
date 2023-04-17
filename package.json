@@ -21,7 +21,7 @@
   "homepage": "https://github.com/ubi-naist/ParmoSense#readme",
   "devDependencies": {
     "browser-sync": "^2.26.14",
-    "ejs": "^3.1.6",
+    "ejs": "^3.1.7",
     "fs": "0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-ejs": "^5.1.0",
